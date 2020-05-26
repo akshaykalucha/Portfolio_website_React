@@ -1,0 +1,74 @@
+/* .toggle-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+
+/* .toggle-button:focus{
+    outline: none;
+} */
+
+/* .toggle-button-line{
+    width: 30px;
+    height: 2px;
+    background: white;
+} */
+
+.toggle-button__burger{
+    width: 1.6rem;
+    height: 0.15rem;
+    background: #323232;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+
+.toggle-button__burger::before,
+.toggle-button__burger::after{
+    content: '';
+    position: absolute;
+    width: 1.6rem;
+    height: 0.15rem;
+    background: #323232;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+
+.toggle-button__burger::before{
+    transform: translateY(-8px);
+}
+
+.toggle-button__burger::after{
+    transform: translateY(8px);
+}
+
+/* ANimation */
+
+.toggle-button.open .toggle-button__burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    transition: transform .4s ease-in-out;
+
+}
+.toggle-button.open .toggle-button__burger::before{
+    background: #000;
+    transform: rotate(45deg) translate(35px, -35px);
+    transition: transform .3s ease-in-out;
+
+}
+
+.toggle-button.open .toggle-button__burger::after{
+    background: #000;
+    transform: rotate(-45deg) translate(35px, 35px);
+    transition: transform .3s ease-in-out;
+
+}
