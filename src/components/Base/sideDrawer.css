@@ -8,6 +8,7 @@
     width: 75%;
     max-width: 400px;
     transform: translateX(100%);
+    z-index: 1;
     transition: all .3s ease-in-out;
 }
 
