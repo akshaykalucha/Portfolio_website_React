@@ -1,14 +1,50 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './featuredwork.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
+
+let AOS1
+let AOS2
+let AOS3
+
+
 function FeaturedWork() {
 
+    const [isMobile, setisMobile] = useState(false)
+    console.log(isMobile)
+
+
+    if(isMobile===true){
+        AOS1 = "fade-up"
+        AOS2 = "fade-left"
+        AOS3 = "fade-right"
+
+    }else if(isMobile===false){
+        AOS1 = "fade-up"
+        AOS2 = "fade-up"
+        AOS3 = "fade-up"
+    }
+
+
+    function resize() {
+        let currentHideNav = (window.innerWidth <= 760);
+        if (currentHideNav) {
+            setisMobile(true);
+        }
+        else{
+            setisMobile(false)
+        }
+    }
 
     useEffect(() => {
         Aos.init({});
     }, [])
+
+    useEffect(() => {
+        window.addEventListener("resize", resize.bind(this));
+        resize();
+    })
 
     return (
         <div>
@@ -17,7 +53,7 @@ function FeaturedWork() {
                 <h3 className="featured_subheading">Side Projects</h3>
                     <div className="card_container">
                     <div className="featured__work">
-                        <div data-aos="fade-up" data-aos-once="true" data-aos-offset="400" data-aos-delay="50" className="work__card">
+                        <div data-aos={AOS1} data-aos-once="true" data-aos-offset="400" data-aos-delay="50" className="work__card">
                             <div className="card__main-heading">
                                 <h1>
                                     Catchit 1.0
@@ -32,7 +68,7 @@ function FeaturedWork() {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-left" data-aos-once="true" data-aos-offset="400" data-aos-delay="50" className="work__card">
+                        <div data-aos={AOS2} data-aos-once="true" data-aos-offset="400" data-aos-delay="50" className="work__card">
                             <div className="card__main-heading">
                                 <h1>
                                     Catchit 1.0
@@ -47,7 +83,7 @@ function FeaturedWork() {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-right" data-aos-once="true" data-aos-offset="400" data-aos-delay="50" className="work__card">
+                        <div data-aos={AOS3} data-aos-once="true" data-aos-offset="400" data-aos-delay="50" className="work__card">
                             <div className="card__main-heading">
                                 <h1>
                                     Catchit 1.0
