@@ -39,7 +39,7 @@ export default function DrawerButton(props) {
     }
 
     if(props.drawer===true){
-        console.log('btn opened')
+        // console.log('btn opened')
         buttonClasses = ['toggle-button', 'open']
     }
 

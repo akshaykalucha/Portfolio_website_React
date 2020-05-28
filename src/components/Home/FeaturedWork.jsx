@@ -13,7 +13,7 @@ let anchorAOS
 function FeaturedWork() {
 
     const [isMobile, setisMobile] = useState(false)
-    console.log(isMobile)
+    // console.log(isMobile)
 
 
     if(isMobile===true){

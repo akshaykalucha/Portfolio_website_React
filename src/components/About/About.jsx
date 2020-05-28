@@ -1,4 +1,4 @@
-import React, { } from 'react'
+import React, { useEffect } from 'react'
 import Nav from '../Base/Nav'
 import Footer from '../Base/Footer'
 import Backdrop from '../Base/Backdrop';
@@ -9,6 +9,10 @@ import { connect } from 'react-redux'
 
 
 function About(props) {
+
+    useEffect(() => {
+        console.log('this is state from the reducer', props.DrawerOpenStore)    
+    })
 
     const drawerToggleClickHandler = () => {
         props.setDrawer(!props.DrawerOpenStore)
@@ -36,6 +40,18 @@ function About(props) {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+    
 const mapStateToProps = state => {
     return {
         DrawerOpenStore: state.sideDrawerOpen,
