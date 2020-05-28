@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { } from 'react'
 import Nav from '../Base/Nav'
 import Footer from '../Base/Footer'
 import Backdrop from '../Base/Backdrop';
@@ -8,42 +8,32 @@ import { connect } from 'react-redux'
 
 
 
-class About extends Component {
+function About(props) {
 
-    componentDidMount(){
-        console.log('this is state from the reducer', this.props.DrawerOpenStore)
-    }
-    componentDidUpdate(){
-        console.log('this is state from the reducer', this.props.DrawerOpenStore)
-
+    const drawerToggleClickHandler = () => {
+        props.setDrawer(!props.DrawerOpenStore)
     }
 
-    drawerToggleClickHandler = () => {
-        this.props.setDrawer(!this.props.DrawerOpenStore)
-    }
-
-    backDropClickHandler = () => {
-        this.props.setDrawer(false)
+    const backDropClickHandler = () => {
+        props.setDrawer(false)
 
     }
-    render() {
 
         let backDrop;
 
-        if(this.props.DrawerOpenStore){
-            backDrop = <Backdrop click ={this.backDropClickHandler} />
+        if(props.DrawerOpenStore){
+            backDrop = <Backdrop click ={backDropClickHandler} />
         }
 
         return (
             <div>
-                <Nav unshow={this.backDropClickHandler} show ={this.props.DrawerOpenStore} drawer={this.props.DrawerOpenStore} drawerClickHandler={this.drawerToggleClickHandler} />
+                <Nav unshow={backDropClickHandler} show ={props.DrawerOpenStore} drawer={props.DrawerOpenStore} drawerClickHandler={drawerToggleClickHandler} />
                 {backDrop}
                     <h1>This is about page</h1>
                 <Footer />
             </div>
         )
     }
-}
 
 
 const mapStateToProps = state => {
