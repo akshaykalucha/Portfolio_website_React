@@ -13,36 +13,30 @@ class About extends Component {
     componentDidMount(){
         console.log('this is state from the reducer', this.props.DrawerOpenStore)
     }
+    componentDidUpdate(){
+        console.log('this is state from the reducer', this.props.DrawerOpenStore)
 
-
-    state ={
-        sideDrawerOpen: false
     }
 
     drawerToggleClickHandler = () => {
         this.props.setDrawer(!this.props.DrawerOpenStore)
-        // console.log('this is state from the reducer', this.props.DrawerOpen)
-        this.setState((prevState) => {
-            return {sideDrawerOpen: !prevState.sideDrawerOpen}
-        })
     }
 
     backDropClickHandler = () => {
         this.props.setDrawer(false)
-        this.setState({sideDrawerOpen: false})
 
     }
     render() {
 
         let backDrop;
 
-        if(this.state.sideDrawerOpen){
+        if(this.props.DrawerOpenStore){
             backDrop = <Backdrop click ={this.backDropClickHandler} />
         }
 
         return (
             <div>
-                <Nav unshow={this.backDropClickHandler} show ={this.state.sideDrawerOpen} drawer={this.state.sideDrawerOpen} drawerClickHandler={this.drawerToggleClickHandler} />
+                <Nav unshow={this.backDropClickHandler} show ={this.props.DrawerOpenStore} drawer={this.props.DrawerOpenStore} drawerClickHandler={this.drawerToggleClickHandler} />
                 {backDrop}
                     <h1>This is about page</h1>
                 <Footer />
