@@ -71,7 +71,7 @@ function About(props) {
                                     GitHub
                                 </a>
 
-                                <a href="/">
+                                <a className="inquiry__linkedin" href="/">
                                     <img className="linkedin__inquiry-img" src={linkedin} alt=""/>
                                     Linkedin
                                 </a>
