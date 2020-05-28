@@ -1,0 +1,82 @@
+.about__section{
+    margin: 0 8rem;
+    margin-top: 9rem;
+}
+
+.about__container h1{
+    font-size: 52px;
+    line-height: 1.1;
+    color: rgba(0,0,0,0.8);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin-bottom: 31px;
+}
+
+
+.about__container p{
+    color: rgb(33,33,33);
+    line-height: 1.6;
+    font-size: 18px;
+    margin-right: 13rem;
+}
+
+
+.inquiry__container{
+    margin-top: 2rem;
+}
+
+.inquiry__container p{
+    font-size: 20px;
+    color: #212121;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin-bottom: 0;
+}
+
+
+.inquiry__container i{
+    margin-top: 24px;
+    margin-left: 60px;
+    font-size: 22px;
+}
+
+
+.inqueries__para{
+    font-size: 20px !important;
+}
+
+
+
+.contact-info{
+    display: grid;
+    grid-template-columns: 92px 600px;
+    margin-left: -44px;
+}
+
+.somewhere{
+    margin-top: 3rem;
+    font-size: 33px;
+    margin-left: -13px;
+    color: rgba(0,0,0,0.8);
+}
+.web__inquiry__main{
+    margin-left: -9px;
+}
+.web__inquiry__main a{
+    text-decoration: none;
+    color: #212121;
+    font-size: 33px;
+    font-weight: 500;
+    margin-right: 7rem;
+}
+.web__inquiry__main img{
+    height: 34px;
+    padding-right: 5px;
+    position: relative;
+    top: 5px;
+}
+
+.linkedin__inquiry-img{
+    top: 2px !important;
+}
+.github__inquiry-img{
+    top: 3px !important;
+}
