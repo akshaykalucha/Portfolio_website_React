@@ -6,7 +6,20 @@ import './contactform.css'
 export class ContactForm extends Component {
 
     state={
+        name: "",
+        email: "",
+        message: ""
+    }
 
+    handleChange(e){
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    formSubmit(e){
+        e.preventDefault();
+        console.log('form submit in action')
     }
 
 
@@ -21,25 +34,25 @@ export class ContactForm extends Component {
                             <a className="my__email" href="akshay23l@hotmail.com" target="_top">akshay23l@hotmail.com"</a>
                         </h4>
                         <p className="form__para">Or fill in the contact form down below</p>
-                        <form className="form-main" action="">
+                        <form onSubmit={this.formSubmit} method="POST"  className="form-main">
                             <div className="fullname">
                                 <label htmlFor="name" aria-label="please insert your name">
                                     Full name: <br/>
-                                    <input className="fillnameLabel" type="text" name="name" id="name" />
+                                    <input onChange={e => this.handleChange(e)} value={this.state.name} className="fillnameLabel" type="text" name="name" id="name" />
                                 </label>
                                 <div className="error__message__fullname"></div>
                             </div>
                             <div className="emai">
                                 <label htmlFor="email" aria-label="please insert your email">
                                     Your email: <br/>
-                                    <input className="emailLabel" type="text" name="email" id="email" />
+                                    <input onChange={e => this.handleChange(e)} value={this.state.email} className="emailLabel" type="text" name="email" id="email" />
                                 </label>
                                 <div className="error__message__email"></div>
                             </div>
                             <div className="message">
                                 <label htmlFor="name" aria-label="please insert your message">
                                     Message: <br/>
-                                    <textarea className="messageLabel" type="text" name="message" id="message" />
+                                    <textarea onChange={e => this.handleChange(e)} value={this.state.message} className="messageLabel" type="text" name="message" id="message" />
                                 </label>
                                 <div className="error__message__message"></div>
                             </div>

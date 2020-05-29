@@ -48,7 +48,10 @@
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;
-    padding: 0.9rem 1rem;
+    color: rgb(130, 130, 130);
+    outline: none;
+    font-size: 19px;
+    padding: 0.8rem 0.5rem;
 }
 
 .form-main label{
@@ -57,11 +60,15 @@
 }
 
 .messageLabel{
-    width: 89%;
+    width: 87.2%;
     height: 134px;
     border-radius: 4px;
     margin-top: 6px;
+    color: rgb(130, 130, 130);
+    font-size: 19px;
+    outline: none;
     margin-bottom: 2rem;
+    padding: 0.4rem 0.5rem;
 }
 
 .submitButton{
