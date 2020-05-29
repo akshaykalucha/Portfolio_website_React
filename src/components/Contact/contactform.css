@@ -1,0 +1,83 @@
+.contactForm__main{
+    margin-top: 6rem;
+    text-align: left;
+    padding: 2rem 0px;
+}
+
+.contactForm{
+    margin: 0 13rem;
+    margin-left: 20rem;
+}
+
+.form-heading{
+    font-size: 18px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 700;
+    columns: #333333;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}
+
+.my__email{
+    padding-left: 10px;
+    color: #0077ff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.form__para{
+    font-size: 18px;
+    color: #333333;
+    font-weight: 500;
+    padding-left: 3px;
+    margin-top: 53px;
+}
+
+.form-main{
+    padding-left: 8px;
+}
+
+.form-main input{
+    width: 89%;
+    margin-top: 5px;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    text-align: left;
+    columns: rgb(130, 130, 130);
+    transition: all 0.2s ease 0s;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 0.9rem 1rem;
+}
+
+.form-main label{
+
+}
+
+.fullname{
+
+}
+.fillnameLabel{
+
+}
+
+.email{
+
+}
+
+.emailLabel{
+
+}
+
+.message{
+
+}
+
+.messageLabel{
+    width: 89%;
+    height: 134px;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 2rem;
+}
