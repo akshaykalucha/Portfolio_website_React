@@ -1,7 +1,8 @@
 import * as actionTypes from './actions';
 
 const initialState = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
+    isMobile: false
 }
 
 const reducer = (state=initialState, action ) => {
@@ -11,6 +12,13 @@ const reducer = (state=initialState, action ) => {
                 ...state,
                 sideDrawerOpen: action.param,
             }
+        
+        case actionTypes.SET_MOBILE:
+            return{
+                ...state,
+                isMobile: action.param
+            }
+
         default:
             return state
     }
