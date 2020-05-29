@@ -29,6 +29,7 @@ export class ContactForm extends Component {
         setTimeout(() => {
             this.setState({
                 success: true,
+                submitClicked: false,
             })
         }, 4000)
     }
@@ -39,7 +40,7 @@ export class ContactForm extends Component {
             return(
                 <div>
                     <Nav />
-                    <h1 style={{marginTop:"4rem"}}>Voila your message has been submitetd</h1>
+                    <h1 style={{marginTop:"9rem"}}>Voila your message has been submitetd</h1>
                     <Footer />
                 </div>
             )
@@ -55,7 +56,7 @@ export class ContactForm extends Component {
                                 <a className="my__email" href="akshay23l@hotmail.com" target="_top">akshay23l@hotmail.com"</a>
                             </h4>
                             <p className="form__para">Or fill in the contact form down below</p>
-                            <form onSubmit={this.formSubmit.bind(this)} method="POST"  className="form-main">
+                            <form onSubmit={ e => this.formSubmit(e)} method="POST"  className="form-main">
                                 <div className="fullname">
                                     <label htmlFor="name" aria-label="please insert your name">
                                         Full name: <br/>
@@ -91,7 +92,7 @@ export class ContactForm extends Component {
             return(
                 <div>
                     <Nav />
-                    <h1 style={{marginTop:"4rem"}}>Loading.....</h1>
+                    <h1 style={{marginTop:"9rem"}}>Loading.....</h1>
                     <Footer />
                 </div>
             )
