@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Nav from '../Base/Nav'
 import Footer from '../Base/Footer'
 import './contactform.css'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export class ContactForm extends Component {
 
@@ -36,6 +37,12 @@ export class ContactForm extends Component {
 
 
     render() {
+
+        let progress
+        if(this.state.submitClicked){
+            progress = <CircularProgress />
+        }
+
         if(this.state.success===true){
             return(
                 <div>
@@ -45,7 +52,7 @@ export class ContactForm extends Component {
                 </div>
             )
         }
-        if(this.state.submitClicked === false){
+        else{
             return (
                 <div>
                     <Nav />
@@ -83,16 +90,10 @@ export class ContactForm extends Component {
                                 </div>
                             </form>
                         </div>
+                        <div className="progressIcon">
+                            {progress}
+                        </div>
                     </div>
-                    <Footer />
-                </div>
-            )
-        }
-        else{
-            return(
-                <div>
-                    <Nav />
-                    <h1 style={{marginTop:"9rem"}}>Loading.....</h1>
                     <Footer />
                 </div>
             )
