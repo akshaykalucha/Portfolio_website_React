@@ -56,29 +56,29 @@
     font-weight: 500;
 }
 
-.fullname{
-
-}
-.fillnameLabel{
-
-}
-
-.email{
-
-}
-
-.emailLabel{
-
-}
-
-.message{
-
-}
-
 .messageLabel{
     width: 89%;
     height: 134px;
     border-radius: 4px;
     margin-top: 6px;
     margin-bottom: 2rem;
+}
+
+.submitButton{
+    width: 16% !important;
+    padding: 10px 37px !important;
+    font-size: 22px;
+    border-radius: 25px !important;
+    margin-left: 36%;
+    background-image: linear-gradient(10deg, rgb(0, 114, 255) 0%, rgb(0, 198, 255) 100%);
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(106, 147, 255) 0px 4px 0px -4px;
+    user-select: none;
+    border-style: none !important;
+    border: none !important;
+    border-color: initial;
+    border-image: initial;
+    border-width: initial !important;
+    cursor: pointer;
+    outline: none !important;
 }

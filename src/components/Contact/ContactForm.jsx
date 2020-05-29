@@ -43,6 +43,9 @@ export class ContactForm extends Component {
                                 </label>
                                 <div className="error__message__message"></div>
                             </div>
+                            <div className="submit__button">
+                                <button type="submit" className="submitButton" name="submit" id="">Send</button>
+                            </div>
                         </form>
                     </div>
                 </div>
