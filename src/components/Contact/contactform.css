@@ -89,3 +89,14 @@
     cursor: pointer;
     outline: none !important;
 }
+
+.progressIcon{
+    margin-left: 59%;
+    margin-top: -44px;
+    height: 0px !important;
+}
+
+
+@media(max-width: 768px){
+
+}
