@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Nav from '../Base/Nav'
 import Footer from '../Base/Footer'
-import Backdrop from '../Base/Backdrop';
 import * as actionTypes from '../Store/actions'
 import { connect } from 'react-redux'
 import './about.css'
@@ -13,29 +12,9 @@ import twitter from './twitter.svg'
 
 function About(props) {
 
-    useEffect(() => {
-        console.log('this is state from the reducer', props.DrawerOpenStore)    
-    })
-
-    const drawerToggleClickHandler = () => {
-        props.setDrawer(!props.DrawerOpenStore)
-    }
-
-    const backDropClickHandler = () => {
-        props.setDrawer(false)
-
-    }
-
-        let backDrop;
-
-        if(props.DrawerOpenStore){
-            backDrop = <Backdrop click ={backDropClickHandler} />
-        }
-
         return (
             <div>
-                <Nav unshow={backDropClickHandler} show ={props.DrawerOpenStore} drawer={props.DrawerOpenStore} drawerClickHandler={drawerToggleClickHandler} />
-                {backDrop}
+                <Nav />
                     <section className="about__section">
                         <div className="about__container">
                             <h1>About Me</h1>
