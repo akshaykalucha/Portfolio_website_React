@@ -1,47 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import NavDesktop from './NavDesktop'
 import NavMobile from './NavMobile';
 import SideDrawer from '../Base/SideDrawer';
 
 
 
-class Nav extends Component {
+function Nav(props) {
 
-    state={
-        isMobile: false
-    }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.resize.bind(this));
-        this.resize();
-    }
-    
-    resize() {
-        let currentHideNav = (window.innerWidth <= 760);
+    const[isMobile, setIsMobile] = useState(false)
+
+    function resize() {
+        let currentHideNav = (window.innerWidth <= 768);
         if (currentHideNav) {
-            this.setState({isMobile: !this.state.isMobile});
+            setIsMobile(true)
         }
         else{
-            this.setState({isMobile: false})
+            setIsMobile(false)
         }
     }
 
+    useEffect(() => {
+        console.log('this is state of ismobile', isMobile)
+        window.addEventListener("resize", resize.bind(this));
+        resize();
+    })
 
-    render() {
 
-        if(this.state.isMobile===false){
+        if(isMobile===false){
             return(
                 <NavDesktop />
             )
         }else{
             return(
                 <div>
-                <NavMobile drawerHandler={this.props.drawer} click={this.props.drawerClickHandler} />
-                <SideDrawer unshowsideDrawer={this.props.unshow} showSidedrawer ={this.props.show}  />
+                <NavMobile drawerHandler={props.drawer} click={props.drawerClickHandler} />
+                <SideDrawer unshowsideDrawer={props.unshow} showSidedrawer ={props.show}  />
                 </div>
             )
         }
     }
-}
 
 export default Nav
