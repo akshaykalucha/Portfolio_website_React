@@ -24,14 +24,14 @@ export class ContactForm extends Component {
                         <form className="form-main" action="">
                             <div className="fullname">
                                 <label htmlFor="name" aria-label="please insert your name">
-                                    Funn name: <br/>
+                                    Full name: <br/>
                                     <input className="fillnameLabel" type="text" name="name" id="name" />
                                 </label>
                                 <div className="error__message__fullname"></div>
                             </div>
                             <div className="emai">
-                                Your email: <br/>
                                 <label htmlFor="email" aria-label="please insert your email">
+                                    Your email: <br/>
                                     <input className="emailLabel" type="text" name="email" id="email" />
                                 </label>
                                 <div className="error__message__email"></div>

@@ -52,7 +52,8 @@
 }
 
 .form-main label{
-
+    color: rgba(0,0,0,0.8);
+    font-weight: 500;
 }
 
 .fullname{
