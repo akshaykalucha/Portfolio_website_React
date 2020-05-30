@@ -5,6 +5,7 @@ import MyWork from './MyWork'
 import Footer from '../Base/Footer'
 import Testimonials from './Testimonials'
 import FeaturedWork from './FeaturedWork'
+import BlogArticle from './BlogArticle'
 
 
 export class Index extends Component {
@@ -19,6 +20,7 @@ export class Index extends Component {
                 <Intro />
                 <MyWork />
                 <FeaturedWork />
+                <BlogArticle />
                 <Testimonials />
                 <Footer />
             </div>
