@@ -135,6 +135,9 @@ export class ContactForm extends Component {
     formSubmit(e){
         e.preventDefault();
         if(this.state.name.length <= 1 || this.state.email.length <= 1 || this.state.message.length <= 1){
+
+        }
+        if(this.state.name.length <= 1 || this.state.email.length <= 1 || this.state.message.length <= 1){
             console.log('please fill the fields')
             this.setState({
                 ...this.state,
@@ -176,7 +179,27 @@ export class ContactForm extends Component {
     goBack(e){
         console.log('going back')
         this.setState({
-            success: false
+            name: "",
+            email: "",
+            message: "",
+            submitClicked: false,
+            success: false,
+            errorMessage: {
+                nameError: "",
+                emailError: "",
+                messageError: "",
+                validEmail: null
+            },
+            firstFocus: false,
+            setNewStyleName: {
+                borderColor: null
+            },
+            setNewStyleMessage: {
+                borderColor: null
+            },
+            setNewStyle: {
+                borderColor: null
+            }
         })
     }
     onFocusName() {
