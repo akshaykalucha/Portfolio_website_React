@@ -47,7 +47,10 @@ export class ContactForm extends Component {
             return(
                 <div>
                     <Nav />
-                    <h1 style={{marginTop:"9rem"}}>Voila your message has been submitetd</h1>
+                    <div className="goBack">
+                        <h1 className="confirmation__heading" style={{}}>Sent email successfully</h1>
+                        <button className="back__button">Back</button>
+                    </div>
                     <Footer />
                 </div>
             )
