@@ -134,7 +134,7 @@ export class ContactForm extends Component {
 
     formSubmit(e){
         e.preventDefault();
-        if(validEmailRegex.test(this.state.email)===false){
+        if(this.state.name.length >= 1 && this.state.message.length >=1 && validEmailRegex.test(this.state.email)===false){
             alert('invalid email')
             return
         }
