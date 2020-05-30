@@ -1,0 +1,31 @@
+.blogArticle__main{
+
+}
+
+.component{
+
+}
+
+.headings{
+
+}
+
+.cards{
+    display: flex;
+    -webkit-box-pack: justify;
+    align-items: center;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+}
+
+.thumbnail{
+
+}
+
+.card__heading{
+
+}
+
+.card__intro{
+
+}
