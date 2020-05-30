@@ -22,13 +22,65 @@ export class ContactForm extends Component {
             messageError: "",
             validEmail: null
         },
-        firstFocus: false
+        firstFocus: false,
+        setNewStyleName: {
+            borderColor: null
+        },
+        setNewStyleMessage: {
+            borderColor: null
+        },
+        setNewStyle: {
+            borderColor: null
+        }
     }
+    
 
     handleChange(e){
         this.setState({
             [e.target.name]: e.target.value
         })
+        if(e.target.name==="name"){
+            let name = e.target.value
+            this.setState({
+                setNewStyleName: {
+                    borderColor: null
+                },
+            })
+            if(name.length===0){
+                this.setState({
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    nameError: "Name is required",
+                }
+                })
+            }
+            if(name.length>1){
+                this.setState({
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    nameError: "",
+                }
+                })
+            }
+        }
+        if(e.target.name==="message"){
+            let message = e.target.value
+            this.setState({
+                setNewStyleMessage: {
+                    borderColor: null
+                },
+            })
+            if(this.state.firstFocus){
+                if(message.length>1){
+                    this.setState({
+                        errorMessage: {
+                            ...this.state.errorMessage,
+                            messageError: ""
+                        }
+                    })
+                }
+            }
+        }
         if(e.target.name==="email"){
             let email = e.target.value
             this.setState({
@@ -45,6 +97,20 @@ export class ContactForm extends Component {
                                 ...this.state.errorMessage,
                                 validEmail: "Please enter a valid email!",
                                 emailError: ""
+                            },
+                            setNewStyle: {
+                                borderColor: "rgb(229, 57, 53)"
+                            }
+                        })
+                    }
+                    if(email.length<=2){
+                        this.setState({
+                            ...this.state,
+                            email: email,
+                            errorMessage: {
+                                ...this.state.errorMessage,
+                                emailError: "Email is required",
+                                validEmail: null
                             }
                         })
                     }
@@ -56,21 +122,13 @@ export class ContactForm extends Component {
                         errorMessage: {
                             ...this.state.errorMessage,
                             validEmail: null
+                        },
+                        setNewStyle: {
+                            borderColor: null
                         }
                     })
                 }
-            }if(email.length<=2){
-                this.setState({
-                    ...this.state,
-                    email: email,
-                    errorMessage: {
-                        ...this.state.errorMessage,
-                        emailError: "Email is required",
-                        validEmail: null
-                    }
-                })
             }
-
         }
     }
 
@@ -86,7 +144,19 @@ export class ContactForm extends Component {
                     nameError: "Name is required",
                     emailError: "Email is required",
                     messageError: "Message is required"
-                }            
+                },
+                setNewStyle: {
+                    ...this.state.setNewStyle,
+                    borderColor: "rgb(229, 57, 53)"
+                },
+                setNewStyleName: {
+                    ...this.state.setNewStyleName,
+                    borderColor: "rgb(229, 57, 53)"
+                },
+                setNewStyleMessage: {
+                    ...this.state.setNewStyleMessage,
+                    borderColor: "rgb(229, 57, 53)"
+                }
             })
         }else{
             this.setState({
@@ -114,26 +184,71 @@ export class ContactForm extends Component {
     }
 
     onBlurName(e) {
-        this.setState({
-            firstFocus: true,
-            errorMessage: {
-                ...this.state.errorMessage,
-                nameError: "Name is required"
-            }
-        })
+        console.log(e.target.value.length)
+        if(e.target.value<=1){
+            this.setState({
+                firstFocus: true,
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    nameError: "Name is required"
+                },
+                setNewStyleName: {
+                    ...this.state.setNewStyleName,
+                    borderColor: "rgb(229, 57, 53)"
+                } 
+            })
+        }
+        else if(e.target.value.length>1){
+            this.setState({
+                firstFocus: true,
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    nameError: ""
+                },
+                setNewStyleName: {
+                    ...this.state.setNewStyleName,
+                    borderColor: null
+                }  
+            })
+        }
     }
     onFocusEmail() {
         document.getElementById("myInput");
     }
 
     onBlurEmail(e) {
-        this.setState({
-            firstFocus: true,
-            errorMessage: {
-                ...this.state.errorMessage,
-                emailError: "Email is required"
-            }
-        })
+        if(validEmailRegex.test(e.target.value)===true){
+            this.setState({
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    emailError: ""
+                },
+            })
+            return
+        }
+        if(this.state.errorMessage.validEmail !== null){
+            this.setState({
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    emailError: ""
+                },
+                setNewStyle: {
+                    borderColor: "rgb(229, 57, 53)"
+                }
+            })
+        }
+        else{
+            this.setState({
+                firstFocus: true,
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    emailError: "Email is required"
+                },
+                setNewStyle: {
+                    borderColor: "rgb(229, 57, 53)"
+                }
+            })
+        }
     }
 
     onFocusMessage() {
@@ -141,12 +256,25 @@ export class ContactForm extends Component {
     }
 
     onBlurMessage(e) {
+        if(e.target.value.length>=1){
+            this.setState({
+                errorMessage: {
+                    ...this.state.errorMessage,
+                    emailError: ""
+                },
+            })
+            return
+        }
         this.setState({
             firstFocus: true,
             errorMessage: {
                 ...this.state.errorMessage,
                 messageError: "Message is required"
-            }
+            },
+            setNewStyleMessage: {
+                ...this.state.setNewStyleMessage,
+                borderColor: "rgb(229, 57, 53)"
+            } 
         })
     }
 
@@ -185,23 +313,30 @@ export class ContactForm extends Component {
                                 <div className="fullname">
                                     <label htmlFor="name" aria-label="please insert your name">
                                         Full name: <br/>
-                                        <input onChange={e => this.handleChange(e)}  onFocus={this.onFocusName} onBlur={e => this.onBlurName(e)} value={this.state.name} className="fillnameLabel" type="text" name="name" id="name" />
+                                        <input style={this.state.setNewStyleName.borderColor ? this.state.setNewStyleName : null} onChange={e => this.handleChange(e)}  onFocus={this.onFocusName} onBlur={e => this.onBlurName(e)} value={this.state.name} className="fillnameLabel" type="text" name="name" id="name" />
                                     </label>
-                                    <div className="error__message__fullname"></div>
+                                    <div className="error__message__fullname">
+                                        {this.state.errorMessage.nameError.length>1 ? this.state.errorMessage.nameError : null}
+                                    </div>
                                 </div>
                                 <div className="emai">
                                     <label htmlFor="email" aria-label="please insert your email">
                                         Your email: <br/>
-                                        <input onChange={e => this.handleChange(e)}  onFocus={this.onFocusEmail} onBlur={e => this.onBlurEmail(e)} value={this.state.email} className="emailLabel" type="text" name="email" id="email" />
+                                        <input style={this.state.setNewStyle.borderColor ? this.state.setNewStyle : null} onChange={e => this.handleChange(e)}  onFocus={this.onFocusEmail} onBlur={e => this.onBlurEmail(e)} value={this.state.email} className="emailLabel" type="text" name="email" id="email" />
                                     </label>
-                                    <div className="error__message__email"></div>
+                                    <div className="error__message__email">
+                                        {this.state.errorMessage.emailError.length>1 ? this.state.errorMessage.emailError : null}
+                                        {this.state.errorMessage.validEmail ? this.state.errorMessage.validEmail : null}
+                                    </div>
                                 </div>
                                 <div className="message">
                                     <label htmlFor="name" aria-label="please insert your message">
                                         Message: <br/>
-                                        <textarea onChange={e => this.handleChange(e)} onFocus={this.onFocusMessage} onBlur={e => this.onBlurMessage(e)} value={this.state.message} className="messageLabel" type="text" name="message" id="message" />
+                                        <textarea style={this.state.setNewStyleMessage.borderColor ? this.state.setNewStyleMessage : null} onChange={e => this.handleChange(e)} onFocus={this.onFocusMessage} onBlur={e => this.onBlurMessage(e)} value={this.state.message} className="messageLabel" type="text" name="message" id="message" />
                                     </label>
-                                    <div className="error__message__message"></div>
+                                    <div className="error__message__message">
+                                        {this.state.errorMessage.messageError.length>1 ? this.state.errorMessage.messageError : null}
+                                    </div>
                                 </div>
                                 <div className="submit__button">
                                     <button type="submit" className="submitButton" name="submit" id="">Send</button>

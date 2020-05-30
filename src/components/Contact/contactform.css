@@ -1,3 +1,23 @@
+
+.error__message__fullname{
+    font-size: 18px;
+    color: #FF0000;
+    margin-top: -29px;
+    margin-bottom: 1.5rem;
+}
+.error__message__email{
+    font-size: 18px;
+    color: #FF0000;
+    margin-top: -29px;
+    margin-bottom: 1.5rem;
+}
+.error__message__message{
+    font-size: 18px;
+    color: #FF0000;
+    margin-top: -29px;
+    margin-bottom: 1.5rem;
+}
+
 .contactForm__main{
     margin-top: 5rem;
     text-align: left;
@@ -39,7 +59,7 @@
 
 .form-main input{
     width: 89%;
-    margin-top: 5px;
+    margin-top: 7px;
     margin-bottom: 2rem;
     box-sizing: border-box;
     text-align: left;
@@ -57,6 +77,7 @@
 .form-main label{
     color: rgba(0,0,0,0.8);
     font-weight: 500;
+    font-size: 18px;
 }
 
 .messageLabel{
