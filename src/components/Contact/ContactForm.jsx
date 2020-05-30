@@ -35,6 +35,13 @@ export class ContactForm extends Component {
         }, 4000)
     }
 
+    goBack(e){
+        console.log('going back')
+        this.setState({
+            success: false
+        })
+    }
+
 
     render() {
 
@@ -49,7 +56,7 @@ export class ContactForm extends Component {
                     <Nav />
                     <div className="goBack">
                         <h1 className="confirmation__heading" style={{}}>Sent email successfully</h1>
-                        <button className="back__button">Back</button>
+                        <button className="back__button" onClick={e => this.goBack(e)}>Back</button>
                     </div>
                     <Footer />
                 </div>
