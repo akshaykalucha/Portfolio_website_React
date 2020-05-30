@@ -23,7 +23,6 @@ function BlogArticle() {
 
 
     return(
-        cardContent.map((content, index) => 
             <div>
                 <div className="blogArticle__main">
                     <div className="main-component">
@@ -31,6 +30,7 @@ function BlogArticle() {
                             <h1>Popular Articles</h1>
                         </div>
                         <div className="cards">
+                        {cardContent.map((content, index) => 
                             <div className="card-content">
                                 <div className="thumbnail">
                                     <img src={content.thumbnail} alt=""/>
@@ -42,11 +42,11 @@ function BlogArticle() {
                                     <p>{content.content}</p>
                                 </div>
                             </div>
+                        )}
                         </div>
                     </div>
                 </div>
             </div>
-        )
     )
 
 
