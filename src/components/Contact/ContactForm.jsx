@@ -11,7 +11,14 @@ export class ContactForm extends Component {
         email: "",
         message: "",
         submitClicked: false,
-        success: false
+        success: false,
+        errorMessage: {
+            nameError: "",
+            emailError: "",
+            messageError: "",
+            requiredError: ""
+        },
+        firstFocus: false
     }
 
     handleChange(e){
@@ -39,6 +46,15 @@ export class ContactForm extends Component {
         console.log('going back')
         this.setState({
             success: false
+        })
+    }
+    onFocus() {
+        document.getElementById("myInput");
+    }
+
+    onBlur(e) {
+        this.setState({
+            firstFocus: true
         })
     }
 
@@ -77,7 +93,7 @@ export class ContactForm extends Component {
                                 <div className="fullname">
                                     <label htmlFor="name" aria-label="please insert your name">
                                         Full name: <br/>
-                                        <input onChange={e => this.handleChange(e)} value={this.state.name} className="fillnameLabel" type="text" name="name" id="name" />
+                                        <input onChange={e => this.handleChange(e)}  onFocus={this.onFocus} onBlur={e => this.onBlur(e)} value={this.state.name} className="fillnameLabel" type="text" name="name" id="name" />
                                     </label>
                                     <div className="error__message__fullname"></div>
                                 </div>
