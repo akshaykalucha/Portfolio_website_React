@@ -54,7 +54,11 @@ export class ContactForm extends Component {
 
     onBlur(e) {
         this.setState({
-            firstFocus: true
+            firstFocus: true,
+            errorMessage: {
+                ...this.state.errorMessage,
+                nameError: "Name is required"
+            }
         })
     }
 
