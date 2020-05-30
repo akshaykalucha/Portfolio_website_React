@@ -134,10 +134,73 @@ export class ContactForm extends Component {
 
     formSubmit(e){
         e.preventDefault();
-        if(this.state.name.length <= 1 || this.state.email.length <= 1 || this.state.message.length <= 1){
-
+        if(validEmailRegex.test(this.state.email)===false){
+            alert('invalid email')
+            return
         }
-        if(this.state.name.length <= 1 || this.state.email.length <= 1 || this.state.message.length <= 1){
+        if(this.state.name.length >= 1 && this.state.email.length === 0 && this.state.message.length === 0){
+                this.setState({
+                    errorMessage:{
+                        ...this.state.errorMessage,
+                        nameError: "",
+                        emailError: "Email is required",
+                        messageError: "Message is required"
+                    },
+                    setNewStyle: {
+                        ...this.state.setNewStyle,
+                        borderColor: "rgb(229, 57, 53)"
+                    },
+                    setNewStyleMessage: {
+                        ...this.state.setNewStyleMessage,
+                        borderColor: "rgb(229, 57, 53)"
+                    }
+
+                })
+        }else if(this.state.name.length >= 1 && this.state.email.length >= 1 && this.state.message.length <= 1){
+            console.log("yes 2")
+            this.setState({
+                errorMessage:{
+                    ...this.state.errorMessage,
+                    nameError: "",
+                    emailError: "",
+                    messageError: "Message is required"
+                },
+                setNewStyleName: {
+                    ...this.state.setNewStyleName,
+                    borderColor: null
+                },
+                setNewStyle: {
+                    ...this.state.setNewStyle,
+                    borderColor: null
+                },
+                setNewStyleMessage: {
+                    ...this.state.setNewStyleMessage,
+                    borderColor: "rgb(229, 57, 53)"
+                }
+
+            })
+            return
+        }else if(this.state.name.length === 0 && this.state.email.length === 0 && this.state.message.length >= 1){
+            console.log("yes")
+            this.setState({
+                errorMessage:{
+                    ...this.state.errorMessage,
+                    nameError: "Name is required",
+                    emailError: "Email is required",
+                    messageError: ""
+                },
+                setNewStyleName: {
+                    ...this.state.setNewStyleName,
+                    borderColor: "rgb(229, 57, 53)"
+                },
+                setNewStyle: {
+                    ...this.state.setNewStyle,
+                    borderColor: "rgb(229, 57, 53)"
+                }
+            })
+            return
+        }
+        else if(this.state.name.length <= 1 || this.state.email.length <= 1 || this.state.message.length <= 1){
             console.log('please fill the fields')
             this.setState({
                 ...this.state,
