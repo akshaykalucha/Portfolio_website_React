@@ -32,10 +32,6 @@ function BlogArticle(props) {
         for (let i = 0; i<cardContent.length; i++){
             let res = cardContent[i].title.slice(0, 17)
             let newTitle = res + '...'
-            // setCardContent(
-            //     [...cardContent,
-            //     cardContent[i].title = res + "..."]
-            // )
             cardContent[i].title = newTitle
         }
         setCardContent([...cardContent])
@@ -46,8 +42,15 @@ function BlogArticle(props) {
         /* eslint-disable */
         if(props.isMobileStore){
             console.log("yes mobile blog")
+            for (let i = 0; i<cardContent.length; i++){
+                let res = cardContent[i].content.slice(0, 20)
+                let newContent = res + '...'
+                cardContent[i]["Mobilecontent"] = newContent
+                console.log(newContent)
+            }
+            setCardContent([...cardContent])
         }
-    })
+    },[props.isMobileStore])
 
 
     return(
@@ -69,7 +72,7 @@ function BlogArticle(props) {
                                     <h1>{content.title}</h1>
                                 </div>
                                 <div className="card__intro">
-                                    <p>{content.content}</p>
+                                    <p>{props.isMobileStore ? content.Mobilecontent : content.content}</p>
                                 </div>
                             </div>
                         )}
