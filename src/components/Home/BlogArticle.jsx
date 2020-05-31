@@ -29,12 +29,12 @@ function BlogArticle() {
     useState(()=> {
         for (let i = 0; i<cardContent.length; i++){
             let res = cardContent[i].title.slice(0, 17)
-            // cardContent[i].title = res + '...'
-            setCardContent(
-                [...cardContent,
-                cardContent[i].title = res + "..."]
-            )
-            // cardContent[i]["newTitle"] = newTitle
+            let newTitle = res + '...'
+            // setCardContent(
+            //     [...cardContent,
+            //     cardContent[i].title = res + "..."]
+            // )
+            cardContent[i].title = newTitle
         }
         console.log(cardContent)
     }, [])
@@ -48,8 +48,8 @@ function BlogArticle() {
                             <h1>Popular Articles</h1>
                         </div>
                         <div className="cards">
-                        {cardContent.map((content, index) => 
-                            <div className="card-content">
+                        {cardContent.map((content) => 
+                            <div key={Math.random()} className="card-content">
                                 <div className="img-card">
                                     <div className="thumbnail">
                                         <img src={content.thumbnail} alt=""/>
