@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import './blogarticle.css'
 
+function WordCount(str) { 
+    return str.split(" ").length;
+}
+
+
 function BlogArticle() {
 
     const [cardContent, setCardContent] = useState([
@@ -21,6 +26,16 @@ function BlogArticle() {
         }
     ])
 
+    useState(()=> {
+        let num
+        cardContent.map((content, index) => {
+            num = WordCount(content.title)
+            console.log(num, 'word coutn')
+            let wordArr = content.title.split(' ')
+            console.log(wordArr)
+        })
+    }, [])
+
 
     return(
             <div>
@@ -32,8 +47,10 @@ function BlogArticle() {
                         <div className="cards">
                         {cardContent.map((content, index) => 
                             <div className="card-content">
-                                <div className="thumbnail">
-                                    <img src={content.thumbnail} alt=""/>
+                                <div className="img-card">
+                                    <div className="thumbnail">
+                                        <img src={content.thumbnail} alt=""/>
+                                    </div>
                                 </div>
                                 <div className="card__heading">
                                     <h1>{content.title}</h1>
