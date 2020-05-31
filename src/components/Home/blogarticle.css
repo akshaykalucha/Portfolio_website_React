@@ -54,6 +54,11 @@
     transition: all 0.7s ease 0s;
     border-radius: 0.2rem;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.card-content:hover{
+    box-shadow: rgba(33, 33, 33, 0.3) 0px 0px 24px 2px;
 }
 .img-card{
     height: 200px;
@@ -64,13 +69,14 @@
 
 
     .blogArticle__main{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
     
     .headings{
         color: rgba(0,0,0,0.8);
         margin-bottom: 2rem;
+        margin-left: 1.4rem;
     }
     
     .cards{
@@ -88,10 +94,12 @@
         -webkit-box-align: center;
         align-items: center;
         flex-wrap: wrap;
+        margin: 0 1.4rem;
     }
     
     .thumbnail{
-        height: 217px;
+        height: 100%;
+        width: 116px;
     }
     
     .thumbnail img{
@@ -104,16 +112,16 @@
         color: rgba(0,0,0,0.8);
         padding-left: 6px;
         margin-bottom: -10px;
-        padding-left: 12px;
-        font-size: 15px;
+        padding-left: 11px;
+        font-size: 10px;
     }
     
     .card__intro{
-        font-size: 10pt;
+        font-size: 12pt;
         padding-left: 14px;
         padding-right: 16px;
         color: rgb(97, 97, 97);
-        height: 176px;
+        height: auto;
     
     }
     
@@ -124,9 +132,19 @@
         transition: all 0.7s ease 0s;
         border-radius: 0.2rem;
         overflow: hidden;
+        margin-bottom: 2rem;
+        align-items: center;
+        display: flex;
+        width: 100%;
     }
     .img-card{
-        height: 200px;
+        height: 150px;
+        margin-right: 0px;
+    }
+
+    .mov__view{
+        width: 100%;
+        margin-top: -71px;
     }
 
 
