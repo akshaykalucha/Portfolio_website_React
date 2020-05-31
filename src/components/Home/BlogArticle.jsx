@@ -116,7 +116,7 @@ function BlogArticle(props) {
                                     <div className="tags__view">
                                         <div className="tags">
                                             {content.tags.map((tag) => 
-                                                <div style={
+                                                <div key={Math.random()} style={
                                                     tag==="gatsby" ? gatsbyTag
                                                     : tag==="react" ? reactTag
                                                     : tag==="dev" ? devTag
