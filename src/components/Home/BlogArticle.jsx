@@ -28,12 +28,18 @@ function BlogArticle() {
 
     useState(()=> {
         let num
-        cardContent.map((content, index) => {
+        cardContent.map((content, index) => 
             num = WordCount(content.title)
-            console.log(num, 'word coutn')
-            let wordArr = content.title.split(' ')
-            console.log(wordArr)
-        })
+        )
+        console.log(num)
+        for (let i = 0; i<cardContent.length; i++){
+            let res = cardContent[i].title.slice(0, 17)
+            setCardContent(
+                ...cardContent,
+                cardContent[i].title = res + "..."
+            )
+        }
+        console.log(cardContent)
     }, [])
 
 
