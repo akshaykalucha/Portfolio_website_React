@@ -20,8 +20,8 @@ export class Index extends Component {
                 <Intro />
                 <MyWork />
                 <FeaturedWork />
-                <BlogArticle />
                 <Testimonials />
+                <BlogArticle />
                 <Footer />
             </div>
         )
