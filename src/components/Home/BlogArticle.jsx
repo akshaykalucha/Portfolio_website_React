@@ -123,7 +123,7 @@ function BlogArticle(props) {
                                                     : tag==="travel" ? travelTag
                                                     : tag==="bio" ? bioTag
                                                     : null
-                                                } className="tag">{tag}</div>
+                                                } className="tag"><a className="tagLink" href="/">{tag}</a></div>
                                             )}
                                         </div>
                                     </div>

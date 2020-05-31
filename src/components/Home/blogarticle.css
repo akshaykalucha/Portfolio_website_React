@@ -64,6 +64,41 @@
     height: 200px;
 }
 
+.tags__view{
+
+}
+
+.tags{
+    display: flex;
+    flex-wrap: flex;
+    -webkit-box-align: center;
+    height: 80px;
+    align-items: center;
+    overflow-y: hidden;
+    margin-bottom: 0.5rem;
+    margin-left: 1.6rem;
+}
+
+.tag{
+    margin: 0px 1rem 1rem 0px;
+    opacity: 1;
+    padding: 0.2rem 1rem;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: all 0.3s ease 0s;
+    color: rgb(255, 255, 255);
+    height: 25px;
+    cursor: pointer;
+}
+
+.tag:hover{
+    opacity: 0.8;
+}
+.tagLink{
+    text-decoration: none;
+    color: white;
+}
+
 @media(max-width: 768px){
 
 
@@ -144,8 +179,43 @@
 
     .mov__view{
         width: 100%;
-        margin-top: -71px;
+        margin-top: -11px;
     }
 
+    .tags__view{
+
+    }
+    
+    .tags{
+        display: flex;
+        flex-wrap: flex;
+        -webkit-box-align: center;
+        height: 80px;
+        align-items: center;
+        overflow-y: hidden;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        padding-left: 20px;
+    }
+    
+    .tag{
+        margin: 0px 1rem 1rem 0px;
+        opacity: 1;
+        padding: 0.2rem 1rem;
+        border-radius: 50px;
+        font-size: 14px;
+        transition: all 0.3s ease 0s;
+        color: rgb(255, 255, 255);
+        height: 23px;
+        cursor: pointer;
+    }
+    
+    .tag:hover{
+        opacity: 0.8;
+    }
+    .tagLink{
+        text-decoration: none;
+        color: white;
+    }
 
 }
