@@ -36,6 +36,7 @@ function BlogArticle() {
             // )
             cardContent[i].title = newTitle
         }
+        setCardContent([...cardContent])
         console.log(cardContent)
     }, [])
 
