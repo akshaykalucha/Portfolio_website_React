@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './blogarticle.css'
+import { connect } from 'react-redux'
 
 // function WordCount(str) { 
 //     return str.split(" ").length;
 // }
 
 
-function BlogArticle() {
+function BlogArticle(props) {
 
     const [cardContent, setCardContent] = useState([
         {
@@ -26,7 +27,8 @@ function BlogArticle() {
         }
     ])
 
-    useState(()=> {
+    useEffect(()=> {
+        /* eslint-disable */
         for (let i = 0; i<cardContent.length; i++){
             let res = cardContent[i].title.slice(0, 17)
             let newTitle = res + '...'
@@ -39,6 +41,13 @@ function BlogArticle() {
         setCardContent([...cardContent])
         console.log(cardContent)
     }, [])
+
+    useEffect(() => {
+        /* eslint-disable */
+        if(props.isMobileStore){
+            console.log("yes mobile blog")
+        }
+    })
 
 
     return(
@@ -96,4 +105,10 @@ function BlogArticle() {
     // )
 }
 
-export default BlogArticle
+const mapStateToProps = state => {
+    return {
+        isMobileStore: state.isMobile,
+    }
+}
+
+export default connect(mapStateToProps)(BlogArticle)
