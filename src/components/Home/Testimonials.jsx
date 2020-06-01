@@ -1,42 +1,41 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import './testimonials.css'
 import Glider from './glider.min.js'
+import { connect } from 'react-redux'
 
 
-class Testimonials extends Component {
+function Testimonials(props) {
 
 
-    state={
-        isMobile: false
-    }
+    useEffect(() => {
+            if (props.isMobileStore===true) {
+                var slider = document.querySelector('.glider');
+                console.log("mobiletest")
+                if (slider){
+                    new Glider(slider, {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        draggable: true,
+                        arrows: {
+                          prev: '.glider-prev',
+                          next: '.glider-next'
+                        },
+                        rewind: true,
+                        dragVelocity: 1,
+                        duration: 0.7,
+                        scrollLock: true,
+                        scrollLockDelay: 30
+                    });
+                }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.resize.bind(this));
-        this.resize();
-    }
-    
-    resize() {
-        let currentHideNav = (window.innerWidth <= 760);
-        if (currentHideNav) {
-            this.setState({isMobile: !this.state.isMobile});
-            new Glider(document.querySelector('.glider'), {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                draggable: true,
-                arrows: {
-                  prev: '.glider-prev',
-                  next: '.glider-next'
-                },
-                rewind: true,
-                dragVelocity: 1,
-                duration: 0.7,
-                scrollLock: true,
-                scrollLockDelay: 30
-            });
-        }
-        else{
-            this.setState({isMobile: false})
-            new Glider(document.querySelector('.glider'), {
+            }
+    })
+
+    if(props.isMobileStore===false){
+        var slider = document.querySelector('.glider');
+        console.log("desktoptest")
+        if(slider){
+            new Glider(slider, {
                 slidesToShow: 3.5,
                 slidesToScroll: 3,
                 draggable: true,
@@ -51,7 +50,6 @@ class Testimonials extends Component {
         }
     }
 
-    render() {
 
 
 
@@ -105,8 +103,14 @@ class Testimonials extends Component {
             </div>
         </div>
     )
-    }
+    
 }
 
 
-export default Testimonials
+const mapStateToProps = state => {
+    return {
+        isMobileStore: state.isMobile,
+    }
+}
+
+export default connect(mapStateToProps)(Testimonials)
