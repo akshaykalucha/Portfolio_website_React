@@ -1,59 +1,62 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import './testimonials.css'
 import Glider from './glider.min.js'
+import { connect } from 'react-redux'
 
 
-class Testimonials extends Component {
+function Testimonials(props) {
 
+    useEffect(() => {
+        console.log('resizing testimonials')
+    })
 
-    state={
-        isMobile: false
+    var slider = document.querySelector('.glider');
+
+    let MobGlider = () => {
+        if (slider) {
+            new Glider((slider), {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            draggable: true,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            rewind: true,
+            dragVelocity: 1,
+            duration: 0.7,
+            scrollLock: true,
+            scrollLockDelay: 30
+        });
+    }
     }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.resize.bind(this));
-        this.resize();
-    }
-    
-    resize() {
-        let currentHideNav = (window.innerWidth <= 760);
-        if (currentHideNav) {
-            this.setState({isMobile: !this.state.isMobile});
-            new Glider(document.querySelector('.glider'), {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                draggable: true,
-                arrows: {
-                  prev: '.glider-prev',
-                  next: '.glider-next'
-                },
-                rewind: true,
-                dragVelocity: 1,
-                duration: 0.7,
-                scrollLock: true,
-                scrollLockDelay: 30
-            });
-        }
-        else{
-            this.setState({isMobile: false})
-            new Glider(document.querySelector('.glider'), {
+    let DeskGlider = () => {
+        if (slider) {
+            new Glider((slider), {
                 slidesToShow: 3.5,
                 slidesToScroll: 3,
                 draggable: true,
                 arrows: {
-                  prev: '.glider-prev',
-                  next: '.glider-next'
+                    prev: '.glider-prev',
+                    next: '.glider-next'
                 },
                 rewind: true,
                 dragVelocity: 1,
                 duration: 0.7
             });
+            
         }
     }
 
-    render() {
+    if (props.isMobileStore) {
+        MobGlider()
+    }
 
-
+    else if(props.isMobileStore===false){
+        console.log("desktopOn")
+        DeskGlider()
+    }
 
     return (
         <div>
@@ -106,7 +109,13 @@ class Testimonials extends Component {
         </div>
     )
     }
+
+
+
+const mapStateToProps = state => {
+    return {
+        isMobileStore: state.isMobile,
+    }
 }
 
-
-export default Testimonials
+export default connect(mapStateToProps)(Testimonials)

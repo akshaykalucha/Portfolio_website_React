@@ -69,13 +69,13 @@ function BlogArticle(props) {
             cardContent[i]["DesktopTitle"] = newTitle
         }
         setCardContent([...cardContent])
-        console.log(cardContent)
+        // console.log(cardContent)
     }, [])
 
     useEffect(() => {
         /* eslint-disable */
         if(props.isMobileStore){
-            console.log("yes mobile blog")
+            // console.log("yes mobile blog")
             for (let i = 0; i<cardContent.length; i++){
                 let res1 = cardContent[i].title.slice(0, 20)
                 let newTitle = res1 + '...'
@@ -83,11 +83,11 @@ function BlogArticle(props) {
                 let res = cardContent[i].content.slice(0, 29)
                 let newContent = res + '...'
                 cardContent[i]["Mobilecontent"] = newContent
-                console.log(newContent)
+                // console.log(newContent)
             }
             setCardContent([...cardContent])
         }
-        console.log(cardContent)
+        // console.log(cardContent)
     },[props.isMobileStore])
 
 

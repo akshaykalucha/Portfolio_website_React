@@ -11,7 +11,7 @@ class NavDesktop extends Component {
 
 
     componentDidMount(){
-        console.log(this.props.isDarknessStore, "this is darknes level")
+        // console.log(this.props.isDarknessStore, "this is darknes level")
     }
 
     handleDarkMode(e){
