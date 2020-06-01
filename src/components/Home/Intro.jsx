@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './intro.css'
 import skill1 from './icon1.svg'
 import skill2 from './icon4.svg'
 import skill3 from './icon5.svg'
 
-export default class Intro extends Component {
-    render() {
+function Intro(props)  {
+
         return (
             <div>
                 <section className="main__intro__name">
@@ -43,4 +43,6 @@ export default class Intro extends Component {
             </div>
         )
     }
-}
+
+
+export default Intro

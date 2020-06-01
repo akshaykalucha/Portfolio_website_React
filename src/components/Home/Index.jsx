@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Intro from './Intro'
+import Outro from './Outro'
 import MyWork from './MyWork'
 import Testimonials from './Testimonials'
 import FeaturedWork from './FeaturedWork'
@@ -17,6 +18,7 @@ export class Index extends Component {
                 <Intro />
                 <MyWork />
                 <FeaturedWork />
+                <Outro />
                 <Testimonials />
                 <BlogArticle />
             </div>

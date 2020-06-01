@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import DrawerButton from './DrawerButton'
 import classes from './navmobile.module.css'
 import Mylogo from './mylogo.svg';
 
 
-export default class NavMobile extends Component {
-    render() {
+function NavMobile(props) {
         return (
             <div>
             <header className={classes.toolbar}>
@@ -15,9 +14,10 @@ export default class NavMobile extends Component {
                     <div className={classes.spacer}></div>
                 </nav>
             </header>
-            <DrawerButton drawer={this.props.drawerHandler} clickbutton={this.props.click} />
+            <DrawerButton drawer={props.drawerHandler} clickbutton={props.click} />
             </div>
 
         )
     }
-}
+
+export default NavMobile
