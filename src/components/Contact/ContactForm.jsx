@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Nav from '../Base/Nav'
-import Footer from '../Base/Footer'
 import './contactform.css'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import 'regex'
@@ -375,19 +373,16 @@ export class ContactForm extends Component {
         if(this.state.success===true){
             return(
                 <div>
-                    <Nav />
                     <div className="goBack">
                         <h1 className="confirmation__heading" style={{}}>Sent email successfully</h1>
                         <button className="back__button" onClick={e => this.goBack(e)}>Back</button>
                     </div>
-                    <Footer />
                 </div>
             )
         }
         else{
             return (
                 <div>
-                    <Nav />
                     <div className="contactForm__main">
                         <div className="contactForm">
                             <h4 className="form-heading">
@@ -433,7 +428,6 @@ export class ContactForm extends Component {
                             {progress}
                         </div>
                     </div>
-                    <Footer />
                 </div>
             )
         }

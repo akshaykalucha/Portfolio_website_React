@@ -3,23 +3,6 @@ import './testimonials.css'
 import Glider from './glider.min.js'
 
 
-/*
-
-
-            new Glider(document.querySelector('.glider'), {
-            slidesToShow: 2.9,
-            slidesToScroll: 2,
-            draggable: true,
-            arrows: {
-              prev: '.glider-prev',
-              next: '.glider-next'
-            },
-            rewind: true,
-            dragVelocity: 1,
-            duration: 0.7
-          });
-*/
-
 class Testimonials extends Component {
 
 

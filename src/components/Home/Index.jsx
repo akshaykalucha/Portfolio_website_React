@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Nav from '../Base/Nav';
 import Intro from './Intro'
 import MyWork from './MyWork'
-import Footer from '../Base/Footer'
 import Testimonials from './Testimonials'
 import FeaturedWork from './FeaturedWork'
 import BlogArticle from './BlogArticle'
@@ -13,8 +11,7 @@ export class Index extends Component {
     render() {
         
         return (
-            <div style={{height: '100%'}}>
-                <Nav />
+            <div>
                 <main className="index__main" style={{marginTop: "164px"}}>
                 </main>
                 <Intro />
@@ -22,7 +19,6 @@ export class Index extends Component {
                 <FeaturedWork />
                 <Testimonials />
                 <BlogArticle />
-                <Footer />
             </div>
         )
     }

@@ -1,6 +1,4 @@
 import React from 'react'
-import Nav from '../Base/Nav'
-import Footer from '../Base/Footer'
 import * as actionTypes from '../Store/actions'
 import { connect } from 'react-redux'
 import './about.css'
@@ -14,7 +12,6 @@ function About(props) {
 
         return (
             <div>
-                <Nav />
                     <section className="about__section">
                         <div className="about__container">
                             <h1>About Me</h1>
@@ -57,7 +54,6 @@ function About(props) {
                             </div>
                         </div>
                     </section>
-                <Footer />
             </div>
         )
     }
