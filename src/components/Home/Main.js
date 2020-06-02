@@ -5,6 +5,8 @@ import About from '../About/About'
 import ContactForm from '../Contact/ContactForm'
 import Nav from '../Base/Nav';
 import Footer from '../Base/Footer'
+import BlogMain from '../Blog/BlogMain'
+import Software from '../Software/Software'
 
 export default class Main extends Component {
     render() {
@@ -16,6 +18,8 @@ export default class Main extends Component {
                         <Route path="/" exact component={Index} />
                         <Route path="/about" exact component={About} />
                         <Route path="/contact" exact component={ContactForm} />
+                        <Route path="/blog" exact component={BlogMain} />
+                        <Route path="/software" exact component={Software} />
                     </Switch>
                 </Router>
                 <Footer />
