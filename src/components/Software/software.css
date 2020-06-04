@@ -1,5 +1,5 @@
 .softwareTable{ 
-    margin-top: 11rem;
+    margin-top: 1rem;
 }
 
 table{
@@ -62,4 +62,95 @@ table{
 
 tr:nth-child(1) {
     border-top: solid #a9a9a9 thin;
+}
+
+.software__heading{
+    margin-top: 10rem;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-left: 5.5%;
+}
+
+.Techno__Stack{
+    color: rgba(0,0,0,0.8);
+    background: rgb(249, 249, 249);
+    margin-top: 5rem;
+}
+
+.intro{
+    margin-left: 5.5%;
+    font-size: 38px;
+    letter-spacing: 2px;
+    padding-top: 26px;
+}
+
+.intro-p1{
+    font-size: 15px;
+    margin-top: -29px;
+    margin-left: 5px;
+}
+
+.web__architecture-software{
+    padding-top: 2rem;
+    padding-left: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 5rem;
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: 276px 276px 276px 276px;
+}
+.web__architecture-software h3{
+    font-size: 17px;
+    font-weight: 400;
+}
+.web__architecture-software sub{
+    font-size: 13px;
+}
+.web__architecture-software ul{
+    padding-left: 1.5rem;
+    padding-top: .5rem;
+}
+.web__architecture-software li{
+    padding-top: 0.5rem;
+    font-size: 15px;
+}
+
+.software-services{
+    margin-left: 5.5%;
+    padding-bottom: 4rem;
+}
+
+.software-services h2{
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.service_table{
+    width: 1100px;
+    margin-right: 7.6rem;
+    border-collapse: collapse;
+}
+
+.service_table table tr:nth-child(1){
+    border-top: solid #a9a9a9 thin;
+}
+
+.service_table th{
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    text-align: left;
+    padding-left: 12px
+}
+
+.service_table tr{
+    border-top: solid #a9a9a9 thin;
+}
+
+.service_table td{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 55px;
+    padding-top: 11px;
+    padding-bottom: 12px;
 }
