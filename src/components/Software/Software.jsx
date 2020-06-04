@@ -3,8 +3,6 @@ import { TableBody, Tableheading } from './content'
 
 function Software() {
 
-
-
     return (
         <div>
             <div style={{marginTop:"9rem"}} className="softwareTable">
