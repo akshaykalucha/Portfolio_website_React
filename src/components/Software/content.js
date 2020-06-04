@@ -81,3 +81,5 @@ export const TableBody = [
     }
 
 ]
+
+export const Tableheading = ["Title", "Description", "Language", "Created-on", "Stars", "Updates"]
