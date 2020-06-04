@@ -1,11 +1,12 @@
 import React from 'react'
 import { TableBody, Tableheading } from './content'
+import './software.css'
 
 function Software() {
 
     return (
         <div>
-            <div style={{marginTop:"9rem"}} className="softwareTable">
+            <div className="softwareTable">
                 <table className="softwareTab">
                     <thead>
                         <tr>
