@@ -25,11 +25,11 @@ import { NavLink } from 'react-router-dom'
         <div onClick={props.unshowsideDrawer}>
             <nav className={drawerClasses}>
                 <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/blog">Blog</NavLink></li>
-                    <li><NavLink to="/software">Software</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
+                    <li><NavLink exact to="/" activeStyle={{color: "#212121" }}>Home</NavLink></li>
+                    <li><NavLink to="/about" activeStyle={{color: "#212121" }}>About</NavLink></li>
+                    <li><NavLink to="/blog" activeStyle={{color: "#212121" }}>Blog</NavLink></li>
+                    <li><NavLink to="/software" activeStyle={{color: "#212121" }}>Software</NavLink></li>
+                    <li><NavLink to="/contact" activeStyle={{color: "#212121" }}>Contact</NavLink></li>
                     <img className="side-drawer__Darkness" onClick={handleDarkMode} src={props.isDarknessStore ? Brightness : Darkness} alt=""/>                       
                 </ul>
             </nav>
