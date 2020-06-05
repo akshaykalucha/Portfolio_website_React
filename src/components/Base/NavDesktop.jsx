@@ -34,9 +34,9 @@ class NavDesktop extends Component {
                         <ul>
                             <li><a href="/"><Link to="/">Home</Link></a></li>
                             <li><a href="/"><Link to="/about">About</Link></a></li>
-                            <li><a href="/">Blog</a></li>
-                            <li><a href="/">Software</a></li>
-                            <li><a href="/">Contact</a></li>
+                            <li><a href="/"><Link to="/blog">Blog</Link></a></li>
+                            <li><a href="/"><Link to="/software">Software</Link></a></li>
+                            <li><a href="/"><Link to="/contact">Contact</Link></a></li>
                             <a href="/">
                             <img className="nav__Darkness" onClick={e => this.handleDarkMode(e)} src={this.props.isDarknessStore ? Brightness : Darkness} alt=""/>
                             </a>
