@@ -7,7 +7,6 @@ import linkedin from './linkedin.svg'
 import instagram from './instagram.svg'
 import twitter from './twitter.svg'
 
-
 function About(props) {
 
         return (

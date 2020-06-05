@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import Index from './Index'
 import About from '../About/About'
 import ContactForm from '../Contact/ContactForm'
@@ -11,9 +11,9 @@ import Software from '../Software/Software'
 export default class Main extends Component {
     render() {
         return (
+            <Router>
             <div style={{height: '100%'}}>
             <Nav />
-                <Router>
                     <Switch>
                         <Route path="/" exact component={Index} />
                         <Route path="/about" exact component={About} />
@@ -21,9 +21,9 @@ export default class Main extends Component {
                         <Route path="/blog" exact component={BlogMain} />
                         <Route path="/software" exact component={Software} />
                     </Switch>
-                </Router>
                 <Footer />
             </div>
+            </Router>
         )
     }
 }

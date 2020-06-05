@@ -5,7 +5,7 @@ import Darkness from './darkness.svg';
 import Brightness from './brightness.svg';
 import { connect } from 'react-redux'
 import * as actionTypes from '../Store/actions';
-
+import { Link } from 'react-router-dom'
 
 class NavDesktop extends Component {
 
@@ -32,8 +32,8 @@ class NavDesktop extends Component {
                     <div className="spacer"></div>
                     <div className="toolbar_navigation-items">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">About</a></li>
+                            <li><a href="/"><Link to="/">Home</Link></a></li>
+                            <li><a href="/"><Link to="/about">About</Link></a></li>
                             <li><a href="/">Blog</a></li>
                             <li><a href="/">Software</a></li>
                             <li><a href="/">Contact</a></li>
@@ -45,7 +45,6 @@ class NavDesktop extends Component {
                 </nav>
             </header>
             </div>
-
         )
     }
 }
