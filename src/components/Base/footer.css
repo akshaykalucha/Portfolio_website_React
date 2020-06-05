@@ -38,6 +38,10 @@
     filter: brightness(0) invert(1);
 }
 
+.NavLinks__ul{
+    
+}
+
 .links__ul{
     padding-top: 13px;
     padding-left: 8rem;

@@ -4,7 +4,7 @@ import Darkness from './darkness.svg'
 import { connect } from 'react-redux'
 import * as actionTypes from '../Store/actions';
 import Brightness from './brightness.svg';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -25,11 +25,11 @@ import { Link } from 'react-router-dom'
         <div onClick={props.unshowsideDrawer}>
             <nav className={drawerClasses}>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/software">Software</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/blog">Blog</NavLink></li>
+                    <li><NavLink to="/software">Software</NavLink></li>
+                    <li><NavLink to="/contact">Contact</NavLink></li>
                     <img className="side-drawer__Darkness" onClick={handleDarkMode} src={props.isDarknessStore ? Brightness : Darkness} alt=""/>                       
                 </ul>
             </nav>

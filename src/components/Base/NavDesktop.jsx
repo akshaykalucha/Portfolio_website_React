@@ -5,7 +5,7 @@ import Darkness from './darkness.svg';
 import Brightness from './brightness.svg';
 import { connect } from 'react-redux'
 import * as actionTypes from '../Store/actions';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class NavDesktop extends Component {
 
@@ -28,15 +28,15 @@ class NavDesktop extends Component {
                     <div className="toolbar__toggle-button">
                     </div>
                     <img className="Nav__Logo-A" src={Mylogo} alt=""/>
-                    <div className="toolbar__logo"><Link to="/">Akshay Kalucha</Link></div>
+                    <div className="toolbar__logo"><NavLink to="/">Akshay Kalucha</NavLink></div>
                     <div className="spacer"></div>
                     <div className="toolbar_navigation-items">
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/blog">Blog</Link></li>
-                            <li><Link to="/software">Software</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/software">Software</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                             <a href="/">
                             <img className="nav__Darkness" onClick={e => this.handleDarkMode(e)} src={this.props.isDarknessStore ? Brightness : Darkness} alt=""/>
                             </a>

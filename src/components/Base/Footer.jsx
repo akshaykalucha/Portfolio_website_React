@@ -2,7 +2,7 @@ import React from 'react'
 import FooterCard from './FooterCard'
 import mylogo from './mylogo.svg'
 import './footer.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -13,23 +13,23 @@ function Footer() {
                     <ul className="brand__ul">
                         <li>
                         <img src={mylogo} alt=""/>
-                            <Link to="/">
+                            <NavLink to="/">
                             Akcosh
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
-                    <ul className="links__ul">
+                    <ul className="NavLinks__ul">
                         <li>
-                            <Link to="/about">About</Link>
+                            <NavLink to="/about">About</NavLink>
                         </li>
                         <li>
-                            <Link to="/software">Software</Link>
+                            <NavLink to="/software">Software</NavLink>
                         </li>
                         <li>
-                            <Link to="/blog">Blog</Link>
+                            <NavLink to="/blog">Blog</NavLink>
                         </li>
                         <li>
-                            <Link to="/contact">Contact</Link>
+                            <NavLink to="/contact">Contact</NavLink>
                         </li>
                     </ul>
                     <ul className="social__media-ul">
