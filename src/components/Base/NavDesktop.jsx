@@ -28,15 +28,15 @@ class NavDesktop extends Component {
                     <div className="toolbar__toggle-button">
                     </div>
                     <img className="Nav__Logo-A" src={Mylogo} alt=""/>
-                    <div className="toolbar__logo"><a href="/">Akshay Kalucha</a></div>
+                    <div className="toolbar__logo"><Link to="/">Akshay Kalucha</Link></div>
                     <div className="spacer"></div>
                     <div className="toolbar_navigation-items">
                         <ul>
-                            <li><a href="/"><Link to="/">Home</Link></a></li>
-                            <li><a href="/"><Link to="/about">About</Link></a></li>
-                            <li><a href="/"><Link to="/blog">Blog</Link></a></li>
-                            <li><a href="/"><Link to="/software">Software</Link></a></li>
-                            <li><a href="/"><Link to="/contact">Contact</Link></a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
+                            <li><Link to="/software">Software</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                             <a href="/">
                             <img className="nav__Darkness" onClick={e => this.handleDarkMode(e)} src={this.props.isDarknessStore ? Brightness : Darkness} alt=""/>
                             </a>

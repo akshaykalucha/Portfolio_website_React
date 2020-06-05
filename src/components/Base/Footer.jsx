@@ -2,6 +2,7 @@ import React from 'react'
 import FooterCard from './FooterCard'
 import mylogo from './mylogo.svg'
 import './footer.css'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -12,23 +13,23 @@ function Footer() {
                     <ul className="brand__ul">
                         <li>
                         <img src={mylogo} alt=""/>
-                        <a href="/">
+                            <Link to="/">
                             Akcosh
-                        </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul className="links__ul">
                         <li>
-                            <a href="/">About</a>
+                            <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <a href="/">Software</a>
+                            <Link to="/software">Software</Link>
                         </li>
                         <li>
-                            <a href="/">Blog</a>
+                            <Link to="/blog">Blog</Link>
                         </li>
                         <li>
-                            <a href="/">Contact</a>
+                            <Link to="/contact">Contact</Link>
                         </li>
                     </ul>
                     <ul className="social__media-ul">
