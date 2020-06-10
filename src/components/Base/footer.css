@@ -39,7 +39,15 @@
 }
 
 .NavLinks__ul{
-    
+    margin-top: 4rem;
+    font-size: 19px;
+    margin-right: 6.8rem;
+}
+
+.NavLinks__ul li{
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-family: roboto;
 }
 
 .links__ul{
@@ -201,7 +209,20 @@
         position: relative;
         bottom: 67.5px;
         left: 169px;
-    }    
+    }
+    
+    .NavLinks__ul{
+        margin-top: -1rem;
+        font-size: 19px;
+        margin-right: 0;
+        padding-left: 10rem;
+    }
+
+    .NavLinks__ul li{
+        padding-bottom: 1rem;
+        font-weight: 400;
+        font-family: roboto;
+    }
 
 
 }
