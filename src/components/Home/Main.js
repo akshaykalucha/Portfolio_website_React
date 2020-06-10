@@ -7,11 +7,13 @@ import Nav from '../Base/Nav';
 import Footer from '../Base/Footer'
 import BlogMain from '../Blog/BlogMain'
 import Software from '../Software/Software'
+import ScrollTop from '../Base/ScrollTop'
 
 export default class Main extends Component {
     render() {
         return (
             <Router>
+            <ScrollTop />
             <div style={{height: '100%'}}>
             <Nav />
                     <Switch>
