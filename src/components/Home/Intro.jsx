@@ -10,7 +10,7 @@ function Intro(props)  {
         return (
             <div>
                 <section className="main__intro__name" style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null }>
-                    <h1 style={ props.isDarknessStore ? {color: "white", zIndex: 1} : null } className="branding__name">I'm Akshay Kalucha</h1>
+                    <h1 style={ props.isDarknessStore ? {color: "white", zIndex: 0} : null } className="branding__name">I'm Akshay Kalucha</h1>
                     <p>Self-learning software and programming hobbyist through research & development.
                         I love open source and building side projects. algorithms to document the logic, reasoning, and problems,
                         but there’s also a lot more to it.

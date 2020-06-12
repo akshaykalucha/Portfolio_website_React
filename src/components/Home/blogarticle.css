@@ -119,13 +119,14 @@
     .blogArticle__main{
         width: 100%;
         margin: 0 auto;
-        margin-top: 6rem;
+        margin-top: -5rem;
     }
     
     .headings{
         color: rgba(0,0,0,0.8);
         margin-bottom: 2rem;
         margin-left: 1.4rem;
+        padding-top: 5rem;
     }
     
     .cards{
@@ -144,6 +145,8 @@
         align-items: center;
         flex-wrap: wrap;
         margin: 0 1.4rem;
+        margin-bottom: -24rem;
+        padding-bottom: 20rem;
     }
     
     .thumbnail{

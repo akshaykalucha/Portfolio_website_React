@@ -23,13 +23,13 @@ import { NavLink } from 'react-router-dom'
 
     return (
         <div onClick={props.unshowsideDrawer}>
-            <nav className={drawerClasses}>
+            <nav style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className={drawerClasses}>
                 <ul>
-                    <li><NavLink exact to="/" activeStyle={{color: "#212121" }}>Home</NavLink></li>
-                    <li><NavLink to="/about" activeStyle={{color: "#212121" }}>About</NavLink></li>
-                    <li><NavLink to="/blog" activeStyle={{color: "#212121" }}>Blog</NavLink></li>
-                    <li><NavLink to="/software" activeStyle={{color: "#212121" }}>Software</NavLink></li>
-                    <li><NavLink to="/contact" activeStyle={{color: "#212121" }}>Contact</NavLink></li>
+                    <li><NavLink style={ props.isDarknessStore ? {color: "white"} : null } exact to="/" activeStyle={ props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Home</NavLink></li>
+                    <li><NavLink style={ props.isDarknessStore ? {color: "white"} : null } to="/about" activeStyle={ props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>About</NavLink></li>
+                    <li><NavLink style={ props.isDarknessStore ? {color: "white"} : null } to="/blog" activeStyle={ props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Blog</NavLink></li>
+                    <li><NavLink style={ props.isDarknessStore ? {color: "white"} : null } to="/software" activeStyle={ props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Software</NavLink></li>
+                    <li><NavLink style={ props.isDarknessStore ? {color: "white"} : null } to="/contact" activeStyle={ props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Contact</NavLink></li>
                     <img className="side-drawer__Darkness" onClick={handleDarkMode} src={props.isDarknessStore ? Brightness : Darkness} alt=""/>                       
                 </ul>
             </nav>

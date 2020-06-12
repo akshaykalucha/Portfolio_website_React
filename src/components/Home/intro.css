@@ -116,7 +116,10 @@ body{
 
     .main__intro__name{
         height: 44vh;
-        }
+        padding-top: 10rem;
+        padding-bottom: 11rem;
+        margin-bottom: -13rem;
+    }
         
         .branding__name{
             font-size: 1.4rem;

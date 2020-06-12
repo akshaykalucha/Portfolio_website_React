@@ -1,8 +1,10 @@
 import React, {  } from 'react'
 import './togglebutton.css'
+import { connect } from 'react-redux'
 
 
-export default function DrawerButton(props) {
+
+function DrawerButton(props) {
 
 
     let buttonClasses = ['toggle-button']
@@ -52,3 +54,11 @@ export default function DrawerButton(props) {
             </div>
     )
 }
+
+
+const mapStateToProps = state => {
+    return {
+        isDarknessStore: state.isDark
+    }
+}
+export default connect(mapStateToProps)(DrawerButton)

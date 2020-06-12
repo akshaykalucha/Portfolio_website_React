@@ -37,10 +37,14 @@
 
 @media(max-width: 768px){
 
+    .myWork__Section{
+        margin-top: -10rem;
+    }
 
     .mywork{
         margin: 0 2rem;
         margin-bottom: 2rem;
+        padding-top: 10rem;
     }
     .My__Work-h1{
         letter-spacing: 2px;
@@ -56,6 +60,7 @@
         grid-template-columns: 0 0 0 0;
         margin: 0 29px;
         margin-bottom: 2rem;
+        padding-bottom: 2rem;
     }
     .mywork__workdone h3{
         padding-left: 9px;

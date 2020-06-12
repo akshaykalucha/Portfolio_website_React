@@ -96,6 +96,8 @@
     .card_container{
         width: 89%;
         margin: 0 auto;
+        padding-bottom: 10rem;
+        margin-bottom: -12rem;
     }
     
     .featured__work{
@@ -154,8 +156,9 @@
     }
     
     .container_card{
-        margin-top: 5rem;
+        margin-top: -4rem;
         margin-bottom: 3rem;
+        padding-top: 6rem;
     }
     
     .featured_heading{
