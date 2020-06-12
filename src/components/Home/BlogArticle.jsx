@@ -74,15 +74,15 @@ function BlogArticle(props) {
 
 
     return(
-            <div>
+            <div style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null }>
                 <div className="blogArticle__main">
                     <div className="main-component">
                         <div className="headings">
-                            <h1>Popular Articles</h1>
+                            <h1 style={ props.isDarknessStore ? {color: "white"} : null }>Popular Articles</h1>
                         </div>
                         <div className="cards">
                         {cardContent.map((content) => 
-                            <div key={Math.random()} className="card-content">
+                            <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a"} : null } key={Math.random()} className="card-content">
                                 <div className="img-card">
                                     <div className="thumbnail">
                                         <img src={content.thumbnail} alt=""/>
@@ -90,10 +90,10 @@ function BlogArticle(props) {
                                 </div>
                                 <div className="mov__view">
                                     <div className="card__heading">
-                                        <h1>{props.isMobileStore ? content.MobileTitle : content.DesktopTitle}</h1>
+                                        <h1 style={ props.isDarknessStore ? {color: "white"} : null }>{props.isMobileStore ? content.MobileTitle : content.DesktopTitle}</h1>
                                     </div>
                                     <div className="card__intro">
-                                        <p>{props.isMobileStore ? content.Mobilecontent : content.content}</p>
+                                        <p style={ props.isDarknessStore ? {color: "white"} : null }>{props.isMobileStore ? content.Mobilecontent : content.content}</p>
                                     </div>
                                     <div className="tags__view">
                                         <div className="tags">
@@ -126,6 +126,7 @@ function BlogArticle(props) {
 const mapStateToProps = state => {
     return {
         isMobileStore: state.isMobile,
+        isDarknessStore: state.isDark
     }
 }
 

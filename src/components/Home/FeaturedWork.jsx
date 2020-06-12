@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './featuredwork.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { connect } from 'react-redux'
+
 
 
 let AOS1
@@ -10,7 +12,7 @@ let AOS3
 let anchorAOS
 
 
-function FeaturedWork() {
+function FeaturedWork(props) {
 
     const [isMobile, setisMobile] = useState(false)
     // console.log(isMobile)
@@ -48,17 +50,16 @@ function FeaturedWork() {
         window.addEventListener("resize", resize.bind(this));
         resize();
     })
-
     return (
         <div>
-            <div className="container_card">
-                <h1 className="featured_heading">Featured work</h1>
-                <h3 className="featured_subheading">Side Projects</h3>
+            <div style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="container_card">
+                <h1 style={ props.isDarknessStore ? {color: "white"} : null } className="featured_heading">Featured work</h1>
+                <h3 style={ props.isDarknessStore ? {color: "white"} : null } className="featured_subheading">Side Projects</h3>
                     <div className="card_container">
                     <div className="featured__work">
-                        <div data-aos={AOS1} data-aos-once="true" data-aos-anchor={anchorAOS} data-aos-offset="400" data-aos-delay="50" className="work__card">
+                        <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a", boxShadow: "none"} : null } data-aos={AOS1} data-aos-once="true" data-aos-anchor={anchorAOS} data-aos-offset="400" data-aos-delay="50" className="work__card">
                             <div className="card__main-heading">
-                                <h1>
+                                <h1 style={ props.isDarknessStore ? {color: "white"} : null }>
                                     Catchit 1.0
                                 </h1>
                                 <div className="card-image">
@@ -67,13 +68,13 @@ function FeaturedWork() {
                                     </picture>
                                 </div>
                                 <div className="card__info-footer">
-                                    <p>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
+                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
                                 </div>
                             </div>
                         </div>
-                        <div data-aos={AOS2} data-aos-once="true" data-aos-anchor={anchorAOS} data-aos-offset="400" data-aos-delay="50" className="work__card">
+                        <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a", boxShadow: "none"} : null } data-aos={AOS2} data-aos-once="true" data-aos-anchor={anchorAOS} data-aos-offset="400" data-aos-delay="50" className="work__card">
                             <div className="card__main-heading">
-                                <h1>
+                                <h1 style={ props.isDarknessStore ? {color: "white"} : null }>
                                     Catchit 1.0
                                 </h1>
                                 <div className="card-image">
@@ -82,13 +83,13 @@ function FeaturedWork() {
                                     </picture>
                                 </div>
                                 <div className="card__info-footer">
-                                    <p>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
+                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
                                 </div>
                             </div>
                         </div>
-                        <div data-aos={AOS3} data-aos-once="true" data-aos-anchor={anchorAOS} data-aos-offset="400" data-aos-delay="50" className="work__card">
+                        <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a", boxShadow: "none"} : null } data-aos={AOS3} data-aos-once="true" data-aos-anchor={anchorAOS} data-aos-offset="400" data-aos-delay="50" className="work__card">
                             <div className="card__main-heading">
-                                <h1>
+                                <h1 style={ props.isDarknessStore ? {color: "white"} : null }>
                                     Catchit 1.0
                                 </h1>
                                 <div className="card-image">
@@ -97,7 +98,7 @@ function FeaturedWork() {
                                     </picture>
                                 </div>
                                 <div className="card__info-footer">
-                                    <p>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
+                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
                                 </div>
                             </div>
                         </div>
@@ -108,4 +109,11 @@ function FeaturedWork() {
     )
 }
 
-export default FeaturedWork
+const mapStateToProps = state => {
+    return {
+        isDarknessStore: state.isDark
+    }
+}
+
+
+export default connect(mapStateToProps)(FeaturedWork)

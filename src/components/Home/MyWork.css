@@ -1,6 +1,11 @@
+.myWork__Section{
+    margin-top: -8rem;
+}
+
 .mywork{
     margin: 0 11rem;
     margin-bottom: 2rem;
+    padding-top: 8rem;
 }
 .My__Work-h1{
     letter-spacing: 2px;
@@ -16,6 +21,7 @@
     grid-template-columns: 263px 262px 310px 267px;
     margin: 0 10.2rem;
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 .mywork__workdone h3{
     font-weight: 500;

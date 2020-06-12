@@ -32,11 +32,11 @@ class NavDesktop extends Component {
                     <div className="spacer"></div>
                     <div className="toolbar_navigation-items">
                         <ul>
-                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } exact to="/" activeStyle={ this.props.isDarknessStore ? {color: "#759090" } : {color: "#212121"}}>Home</NavLink></li>
-                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/about" activeStyle={ this.props.isDarknessStore ? {color: "#759090" } : {color: "#212121"}}>About</NavLink></li>
-                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/blog" activeStyle={ this.props.isDarknessStore ? {color: "#759090" } : {color: "#212121"}}>Blog</NavLink></li>
-                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/software" activeStyle={ this.props.isDarknessStore ? {color: "#759090" } : {color: "#212121"}}>Software</NavLink></li>
-                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/contact" activeStyle={ this.props.isDarknessStore ? {color: "#759090" } : {color: "#212121"}}>Contact</NavLink></li>
+                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } exact to="/" activeStyle={ this.props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Home</NavLink></li>
+                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/about" activeStyle={ this.props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>About</NavLink></li>
+                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/blog" activeStyle={ this.props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Blog</NavLink></li>
+                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/software" activeStyle={ this.props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Software</NavLink></li>
+                            <li><NavLink style={ this.props.isDarknessStore ? {color: "white"} : null } to="/contact" activeStyle={ this.props.isDarknessStore ? {color: "#888686" } : {color: "#212121"}}>Contact</NavLink></li>
                             <a href="/">
                             <img className="nav__Darkness" onClick={e => this.handleDarkMode(e)} src={this.props.isDarknessStore ? Brightness : Darkness} alt=""/>
                             </a>

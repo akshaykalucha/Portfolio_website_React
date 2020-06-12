@@ -1,13 +1,14 @@
 import React, {} from 'react'
 import './MyWork.css'
+import { connect } from 'react-redux'
 
 
-export default function MyWork() {
+function MyWork(props) {
     return (
-        <div>
+        <div className="myWork__Section"  style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null }>
             <div className="mywork">
-                <h1 className="My__Work-h1">MY WORK</h1>
-                <p className="My__Work-p">I was never the best at school or academics, I’m just a super curious guy. 
+                <h1 style={ props.isDarknessStore ? {color: "white"} : null } className="My__Work-h1">MY WORK</h1>
+                <p style={ props.isDarknessStore ? {color: "white"} : null } className="My__Work-p">I was never the best at school or academics, I’m just a super curious guy. 
                    I exists to share these ideas and theories that interest me. I spend a lot
                    of time building software and coding, but there’s also a lot more to it. I’ve 
                    been working on algorithms to document the logic, reasoning, and problems encountered 
@@ -16,16 +17,16 @@ export default function MyWork() {
             </div>
             <div className="mywork__workdone">
                 <div className="work1">
-                    <h3>Software Development</h3>
-                    <ul className="work1-list">
+                    <h3 style={ props.isDarknessStore ? {color: "white"} : null }>Software Development</h3>
+                    <ul style={ props.isDarknessStore ? {color: "white"} : null } className="work1-list">
                         <li>Java/C# Automation. CPU bound business logic</li>
                         <li>Low level/embedded IoT programming</li>
                         <li>Cloud computing, microservices, APIs, full stack web apps</li>                    
                     </ul>
                 </div>
                 <div className="work2">
-                    <h3>Graphic Designing</h3>
-                    <ul className="work2-list">
+                    <h3 style={ props.isDarknessStore ? {color: "white"} : null }>Graphic Designing</h3>
+                    <ul style={ props.isDarknessStore ? {color: "white"} : null } className="work2-list">
                         <li>Graphic, templates designs</li>
                         <li>Business model template, software drafts</li>
                         <li>documented and easy to access as a npm module</li>
@@ -33,16 +34,16 @@ export default function MyWork() {
                     </ul>
                 </div>
                 <div className="work3">
-                    <h3>Full Stack Development</h3>
-                    <ul className="work3-list">
+                    <h3 style={ props.isDarknessStore ? {color: "white"} : null }>Full Stack Development</h3>
+                    <ul style={ props.isDarknessStore ? {color: "white"} : null } className="work3-list">
                         <li>Get your mvp up & running in less than a week built with the MERN or JAM stack</li>
                         <li>ask your early users for feedback before scaling it.</li>
                         <li>Cloud computing, microservices, APIs, full stack web apps</li>
                     </ul>
                 </div>
                 <div className="work4">
-                    <h3>Open Source</h3>
-                    <ul className="work4-list">
+                    <h3 style={ props.isDarknessStore ? {color: "white"} : null }>Open Source</h3>
+                    <ul style={ props.isDarknessStore ? {color: "white"} : null } className="work4-list">
                         <li>love open source and micro startups</li>
                         <li>Contribute in Agile based, test driven, and unit testing development</li>
                     </ul>
@@ -52,3 +53,10 @@ export default function MyWork() {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        isDarknessStore: state.isDark
+    }}
+
+
+export default connect(mapStateToProps)(MyWork)

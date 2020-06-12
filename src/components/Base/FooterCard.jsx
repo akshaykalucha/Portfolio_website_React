@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // import TextField from '@material-ui/core/TextField';
 import './footercard.css'
 import 'regex'
-
+import { connect } from 'react-redux'
 const useStyles = makeStyles((theme) => ({
 
     root: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function FooterCard() {
+function FooterCard(props) {
 
     let id = ["myInput" ,"outlined-basic"]
     const [Email, setEmail] = useState("Please enter a valid email!")
@@ -91,9 +91,9 @@ function FooterCard() {
     const classesName = useStyles();
     return (
         <div>
-            <div className="card_footer-main">
-                <h3 className="footer-heading__card">Subscribe to Akcosh.com</h3>
-                <p className="footer-subheading__card">And get the latest articles delivered right to your inbox!</p>
+            <div style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="card_footer-main">
+                <h3 style={ props.isDarknessStore ? {color: "white"} : null } className="footer-heading__card">Subscribe to Akcosh.com</h3>
+                <p style={ props.isDarknessStore ? {color: "white"} : null } className="footer-subheading__card">And get the latest articles delivered right to your inbox!</p>
                    <p className="footer__card-error initiat__error">{focused ? errorText : null}</p>
                    <p className="footer__card-error">{showError ? Email : null}</p>
                 <form className={classesName.root} noValidate autoComplete="off">
@@ -107,4 +107,10 @@ function FooterCard() {
     )
 }
 
-export default FooterCard
+const mapStateToProps = state => {
+    return {
+        isDarknessStore: state.isDark
+    }
+}
+
+export default connect(mapStateToProps)(FooterCard)

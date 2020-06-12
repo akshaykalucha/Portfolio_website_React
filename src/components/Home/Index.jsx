@@ -13,8 +13,8 @@ export class Index extends Component {
         
         return (
             <div>
-                <main className="index__main" style={{marginTop: "164px"}}>
-                </main>
+                {/* <main className="index__main" style={{marginTop: "164px"}}>
+                </main> */}
                 <Intro />
                 <MyWork />
                 <FeaturedWork />
