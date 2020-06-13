@@ -8,7 +8,8 @@ function DrawerButton(props) {
 
 
     let buttonClasses = ['toggle-button']
-    let lineClasses = "toggle-button__burger"
+    let lightLineClasses = "toggle-button__burger-light"
+    let darkLineClasses = "toggle-button__burger-dark"
 
     const btn1 = {
         position: "fixed",
@@ -50,7 +51,7 @@ function DrawerButton(props) {
     }
     return (
             <div className={buttonClasses.join(' ')} style={props.drawer? btn2 : btn1} onClick={clickHandler}>
-                <div className={lineClasses} />
+                <div className={props.isDarknessStore ? darkLineClasses : lightLineClasses }/>
             </div>
     )
 }

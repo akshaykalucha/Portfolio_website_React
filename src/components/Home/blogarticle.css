@@ -1,7 +1,8 @@
 .blogArticle__main{
-    width: 80%;
     margin: 0 auto;
-    margin-top: -5rem;
+    width: 80%;
+    padding-top: 3rem;
+    margin-top: -4rem;
 }
 
 .headings{
@@ -120,6 +121,7 @@
         width: 100%;
         margin: 0 auto;
         margin-top: -5rem;
+        padding-top: 0;
     }
     
     .headings{
