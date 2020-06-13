@@ -11,11 +11,6 @@
 }
 
 .cards{
-    /* display: flex;
-    -webkit-box-pack: justify;
-    align-items: center;
-    flex-wrap: wrap;
-    -webkit-box-align: center; */
     display: grid;
     grid-template-columns: repeat(3, 327px);
     grid-gap: 3rem;
@@ -132,11 +127,7 @@
     }
     
     .cards{
-        /* display: flex;
-        -webkit-box-pack: justify;
-        align-items: center;
-        flex-wrap: wrap;
-        -webkit-box-align: center; */
+
         display: flex;
         grid-template-columns: none;
         grid-gap: 0;
