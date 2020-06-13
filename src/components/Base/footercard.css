@@ -198,3 +198,67 @@
         left: 34px;
     }
 }
+
+
+@media(max-width: 320px){
+
+    .footer-heading__card{
+        font-size: 23px !important;
+        padding-left: 0.8rem !important;
+    }
+    .footer-subheading__card{
+        font-size: 10.9px !important;
+        padding-left: 15px !important;
+    }
+    
+    .form__card-input{
+        margin-left: 9px !important;
+    }
+    
+
+    .form__card-button{
+        margin-left: 4.5rem !important;
+    }
+}
+
+
+@media(max-width: 360px){
+
+    .footer-heading__card{
+        font-size: 25px;
+        padding-left: 1.3rem;
+    }
+    .footer-subheading__card{
+        font-size: 12.9px;
+    }
+    
+    .form__card-input{
+        margin-left: 30px;
+    }
+    
+
+    .form__card-button{
+        margin-left: 6.5rem;
+    }
+}
+
+@media(max-width: 375px){
+
+    .footer-heading__card{
+        font-size: 26px;
+        padding-left: 1.3rem;
+    }
+    .footer-subheading__card{
+        font-size: 12.9px;
+        padding-left: 16px;
+    }
+    
+    .form__card-input{
+        margin-left: 30px;
+    }
+    
+
+    .form__card-button{
+        margin-left: 6.5rem;
+    }
+}
