@@ -227,3 +227,110 @@
 
 
 }
+
+
+
+
+@media(max-width: 360px){    
+    .brand__ul{
+        padding-left: 1.5rem !important;
+        padding-top: 1rem !important;
+    }
+    
+    .social__media-ul{
+        padding-top: 57px;
+        margin-left: 67px !important;
+        position: relative;
+        right: 16% !important;
+    }
+    
+    .social__media-ul li{
+        padding-right: 9px !important;
+        margin-top: -1rem;
+        font-size: 24px;
+        padding-left: 37px !important;
+    }
+
+}
+
+@media(max-width: 320px){    
+
+  
+    .brand__ul{
+        padding-left: 2.5rem !important;
+        padding-top: 1rem !important;
+    }
+    
+    
+    .brand__ul a{
+        padding-right: 9px !important;
+        position: relative;
+        top: -121px !important;
+        font-size: 24px;
+        font-weight: 400;
+        right: -113px !important;
+    }
+    .brand__ul img{
+        height: 180px;
+        filter: brightness(0) invert(1);
+        padding-left: 1rem !important;
+    }
+    .social__media-ul{
+        padding-top: 57px;
+        margin-left: 34px !important;
+        position: relative;
+        right: 16% !important;
+    }
+
+    .NavLinks__ul{
+        margin-top: -3rem;
+        font-size: 19px;
+        margin-right: -3px !important;
+        padding-left: 0 !important;
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 375px){    
+
+    .brand__ul img {
+        height: 180px;
+        filter: brightness(0) invert(1);
+        padding-left: 3rem;
+    }
+    .brand__ul{
+        padding-left: 3.5rem;
+        padding-top: 1rem;
+    }
+    
+    
+    .brand__ul a{
+        padding-right: 9px;
+        position: relative;
+        top: -94px;
+        font-size: 24px;
+        font-weight: 400;
+        right: 74px;
+    }
+    .brand__ul img{
+        height: 180px;
+        filter: brightness(0) invert(1);
+        padding-left: 1rem;
+    }
+    .social__media-ul{
+        padding-top: 57px;
+        margin-left: 79px;
+        position: relative;
+        right: 16%;
+    }
+
+    .NavLinks__ul{
+        margin-top: -3rem;
+        font-size: 19px;
+        margin-right: 6px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+}
