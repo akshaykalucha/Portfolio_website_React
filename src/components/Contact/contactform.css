@@ -156,9 +156,11 @@
 
 
     .contactForm__main{
-        margin-top: 5rem;
+        margin-top: 4rem;
         text-align: left;
+        margin-bottom: -18rem;
         padding: 2rem 0px;
+        padding-bottom: 17rem;
     }
     
     .contactForm{
@@ -254,9 +256,10 @@
     }
 
     .goBack{
-        margin-left: 11%;
-        margin-top: 9rem;
-        margin-bottom: 3rem;
+        padding-left: 11%;
+        padding-top: 9rem;
+        padding-bottom: 15rem;
+        margin-bottom: -18rem;
     }
     
     .confirmation__heading{
