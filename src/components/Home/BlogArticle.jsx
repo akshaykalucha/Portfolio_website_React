@@ -110,7 +110,7 @@ function BlogArticle(props) {
                                         </div>
                                     </div>
                                     <div className="dates__view">
-                                            <i>{content.date}</i>
+                                            <i style={ props.isDarknessStore ? {color: "white"} : null }>{content.date}</i>
                                     </div>
                                 </div>
                             </div>

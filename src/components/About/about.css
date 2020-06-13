@@ -1,6 +1,8 @@
 .about__section{
-    margin: 0 8rem;
-    margin-top: 9rem;
+    padding: 0 8rem;
+    padding-top: 9rem;
+    margin-bottom: -17rem;
+    padding-bottom: 17rem;
 }
 
 .about__container h1{

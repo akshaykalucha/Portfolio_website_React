@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import './contactform.css'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import 'regex'
+import { connect } from 'react-redux'
+
 
 const validEmailRegex = RegExp(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/);
 
 
-export class ContactForm extends Component {
+class ContactForm extends Component {
 
     state={
         name: "",
@@ -373,8 +375,8 @@ export class ContactForm extends Component {
         if(this.state.success===true){
             return(
                 <div>
-                    <div className="goBack">
-                        <h1 className="confirmation__heading" style={{}}>Sent email successfully</h1>
+                    <div style={ this.props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="goBack">
+                        <h1 style={ this.props.isDarknessStore ? {color: "white"} : null } className="confirmation__heading">Sent email successfully</h1>
                         <button className="back__button" onClick={e => this.goBack(e)}>Back</button>
                     </div>
                 </div>
@@ -383,16 +385,16 @@ export class ContactForm extends Component {
         else{
             return (
                 <div>
-                    <div className="contactForm__main">
+                    <div style={ this.props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="contactForm__main">
                         <div className="contactForm">
-                            <h4 className="form-heading">
+                            <h4 style={ this.props.isDarknessStore ? {color: "white"} : null } className="form-heading">
                                 Feel free to email me via
                                 <a className="my__email" href="akshay23l@hotmail.com" target="_top">akshay23l@hotmail.com"</a>
                             </h4>
-                            <p className="form__para">Or fill in the contact form down below</p>
+                            <p style={ this.props.isDarknessStore ? {color: "white"} : null } className="form__para">Or fill in the contact form down below</p>
                             <form onSubmit={ e => this.formSubmit(e)} method="POST"  className="form-main">
                                 <div className="fullname">
-                                    <label htmlFor="name" aria-label="please insert your name">
+                                    <label style={ this.props.isDarknessStore ? {color: "white"} : null } htmlFor="name" aria-label="please insert your name">
                                         Full name: <br/>
                                         <input style={this.state.setNewStyleName.borderColor ? this.state.setNewStyleName : null} onChange={e => this.handleChange(e)}  onFocus={this.onFocusName} onBlur={e => this.onBlurName(e)} value={this.state.name} className="fillnameLabel" type="text" name="name" id="name" />
                                     </label>
@@ -401,7 +403,7 @@ export class ContactForm extends Component {
                                     </div>
                                 </div>
                                 <div className="emai">
-                                    <label htmlFor="email" aria-label="please insert your email">
+                                    <label style={ this.props.isDarknessStore ? {color: "white"} : null } htmlFor="email" aria-label="please insert your email">
                                         Your email: <br/>
                                         <input style={this.state.setNewStyle.borderColor ? this.state.setNewStyle : null} onChange={e => this.handleChange(e)}  onFocus={this.onFocusEmail} onBlur={e => this.onBlurEmail(e)} value={this.state.email} className="emailLabel" type="text" name="email" id="email" />
                                     </label>
@@ -411,7 +413,7 @@ export class ContactForm extends Component {
                                     </div>
                                 </div>
                                 <div className="message">
-                                    <label htmlFor="name" aria-label="please insert your message">
+                                    <label style={ this.props.isDarknessStore ? {color: "white"} : null } htmlFor="name" aria-label="please insert your message">
                                         Message: <br/>
                                         <textarea style={this.state.setNewStyleMessage.borderColor ? this.state.setNewStyleMessage : null} onChange={e => this.handleChange(e)} onFocus={this.onFocusMessage} onBlur={e => this.onBlurMessage(e)} value={this.state.message} className="messageLabel" type="text" name="message" id="message" />
                                     </label>
@@ -434,4 +436,10 @@ export class ContactForm extends Component {
     }
 }
 
-export default ContactForm
+const mapStateToProps = state => {
+    return {
+        isDarknessStore: state.isDark
+    }}
+
+
+export default connect(mapStateToProps)(ContactForm)

@@ -11,43 +11,43 @@ function About(props) {
 
         return (
             <div>
-                    <section className="about__section">
+                    <section style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="about__section">
                         <div className="about__container">
-                            <h1>About Me</h1>
-                            <p>I’m Akshay Kalucha, also known as Akcosh, I’m a self-taught software developer, Graphic, UI/UX Designer
+                            <h1 style={ props.isDarknessStore ? {color: "white"} : null }>About Me</h1>
+                            <p style={ props.isDarknessStore ? {color: "white"} : null }>I’m Akshay Kalucha, also known as Akcosh, I’m a self-taught software developer, Graphic, UI/UX Designer
                                and full stack JavaScript developer. I'm really interested in Technologies & solving dev problems. 
                                You can know more about me by reading my articles. Currently I'm working onsite for Intellify Delhi as a 
                                Full stack software developer and i love to work on new technologies while exploring and learning the core 
                                concepts of development.</p>
                         </div>
                         <div className="inquiry__container">
-                            <p className="inqueries__para">For any inquiries feel free to get in touch with me at:</p>
+                            <p style={ props.isDarknessStore ? {color: "white"} : null } className="inqueries__para">For any inquiries feel free to get in touch with me at:</p>
                             <div className="contact-info">
-                                <i className="fas fa-envelope envelope"></i><p className="email">akshay23l@hotmail.com</p>
-                                <i className="fas fa-phone phone"></i><p className="phonenumber">************</p>
-                                <i className="fas fa-map-marker-alt marker"></i><p className="location">626 ***** ****, New Delhi</p>
-                                <i className="fas fa-map-marker-alt marker2"></i><p className="location2">Somewhere in North Campus, Delhi University, Delhi</p>
+                                <i style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } className="fas fa-envelope envelope"></i><p className="email" style={ props.isDarknessStore ? {color: "white"} : null }>akshay23l@hotmail.com</p>
+                                <i style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } className="fas fa-phone phone"></i><p className="phonenumber" style={ props.isDarknessStore ? {color: "white"} : null }>************</p>
+                                <i style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } className="fas fa-map-marker-alt marker"></i><p className="location" style={ props.isDarknessStore ? {color: "white"} : null }>626 ***** ****, New Delhi</p>
+                                <i style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } className="fas fa-map-marker-alt marker2"></i><p className="location2" style={ props.isDarknessStore ? {color: "white"} : null }>Somewhere in North Campus, Delhi University, Delhi</p>
                             </div>
                         </div>
                         <div className="web__inquiry">
-                            <h2 className="somewhere">Or somewhere else on the web</h2>
+                            <h2 style={ props.isDarknessStore ? {color: "white"} : null } className="somewhere">Or somewhere else on the web</h2>
                             <div className="web__inquiry__main">
-                                <a href="/">
-                                    <img src={twitter} alt=""/>
+                                <a style={ props.isDarknessStore ? {color: "white"} : null } href="/">
+                                    <img style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } src={twitter} alt=""/>
                                     Twitter
                                 </a>
-                                <a href="/">
-                                    <img src={instagram} alt=""/>
+                                <a style={ props.isDarknessStore ? {color: "white"} : null } href="/">
+                                    <img style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } src={instagram} alt=""/>
                                     Instagram
                                 </a>
 
-                                <a href="/">
-                                    <img className="github__inquiry-img" src={github} alt=""/>
+                                <a style={ props.isDarknessStore ? {color: "white"} : null } href="/">
+                                    <img style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } className="github__inquiry-img" src={github} alt=""/>
                                     GitHub
                                 </a>
 
-                                <a className="inquiry__linkedin" href="/">
-                                    <img className="linkedin__inquiry-img" src={linkedin} alt=""/>
+                                <a style={ props.isDarknessStore ? {color: "white"} : null } className="inquiry__linkedin" href="/">
+                                    <img style={ props.isDarknessStore ? {filter: "brightness(0) invert(1)"} : null } className="linkedin__inquiry-img" src={linkedin} alt=""/>
                                     Linkedin
                                 </a>
                             </div>
@@ -73,6 +73,7 @@ function About(props) {
 const mapStateToProps = state => {
     return {
         DrawerOpenStore: state.sideDrawerOpen,
+        isDarknessStore: state.isDark
     }
 }
 

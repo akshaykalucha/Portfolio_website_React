@@ -1,5 +1,6 @@
 .softwareTable{ 
     margin-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 table{
@@ -65,7 +66,7 @@ tr:nth-child(1) {
 }
 
 .software__heading{
-    margin-top: 10rem;
+    padding-top: 10rem;
     font-size: 28px;
     letter-spacing: 1px;
     margin-left: 5.5%;
@@ -74,7 +75,7 @@ tr:nth-child(1) {
 .Techno__Stack{
     color: rgba(0,0,0,0.8);
     background: rgb(249, 249, 249);
-    margin-top: 5rem;
+    padding-top: 5rem;
 }
 
 .intro{
@@ -117,7 +118,8 @@ tr:nth-child(1) {
 
 .software-services{
     margin-left: 5.5%;
-    padding-bottom: 4rem;
+    padding-bottom: 17rem;
+    margin-bottom: -17rem;
 }
 
 .software-services h2{
