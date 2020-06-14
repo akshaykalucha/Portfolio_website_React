@@ -234,19 +234,67 @@ body{
 }
 
 
-
-@media(max-width: 360px){
+@media(max-width: 320px){
 
     .main__intro__name{
         height: 44vh;
-        padding-top: 7rem;
-        padding-bottom: 13rem !important;
-        margin-bottom: -15rem !important;
+        padding-top: 5rem !important;
+        padding-bottom: 15rem !important;
+        margin-bottom: -14rem !important;
+    }
+        
+    .branding__name{
+        font-size: 1.4rem;
+        margin-left: 7%;
+        top: 10px;
     }
     
+    .main__intro__name p{
+        font-size: 17px;
+        padding-left: 7% !important;
+        padding-top: 12px;
+        padding-right: 4.3% !important;
+    }
+    
+    .neon__buttons__color{
+        margin-left: 6%;
+        padding-top: 5px;
+    }
+    
+    .neon__buttons__color a{
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        padding: 0.9rem 1.4rem;
+        font-size: 14px;
+        border-radius: 0.3rem;
+        transition: all .3s ease-in;
+    }
+    .view__resume{
+        background-color: #f9f9f9;
+        color: #00c3ff;
+        box-shadow: rgb(185, 185, 185) 1px 14px 19px -6px;
+        margin-right: 1.3rem;
+    }
+    
+    .view__resume:hover{
+        box-shadow: rgb(185, 185, 185) 1px 2px 19px -6px;
+    }
+    
+    .neon__button-contact{
+        color: #f9f9f9;
+        background-color: #00c3ff;
+        box-shadow: rgba(0, 196, 255, 0.9) 0px 14px 19px -6px;
+    }
+    
+    .neon__button-contact:hover{
+        box-shadow:  rgba(0, 196, 255, 0.9) 0px 1px 19px -6px;
+    }
+    
+    
     .skwedpath{
-        height: 124vh;
-        margin-top: 5rem !important;
+        height: 159vh !important;
+        margin-top: 4rem !important;
         background-color: #f9f9f9;
         width: 100%;
         clip-path: polygon(0% 17%, 100% 0px, 100% 84%, 0px 100%);
@@ -255,14 +303,95 @@ body{
     .main__section__skwed h1{
         color: black;
         padding-top: 120px;
-        margin-left: 9.5rem !important;
+        margin-left: 8.5rem !important;
         font-size: 30px;
     }
 
     .skills__div{
         display: block;
         flex-wrap: nowrap;
-        margin: 0rem 8.6rem !important;
+        margin: 0rem 7.6rem !important;
+        padding-top: 45px;
+    }
+    .skills__div > div{ 
+        margin-right: 4rem;
+        padding-bottom: 5rem;
+    }
+    
+    .skills__div img{
+        height: 110px;      
+        transition: transform .3s; /* Animation */
+    }
+    
+    .skills__div img:hover{
+        transform: scale(1.2);
+    }
+
+    .skwed__imd__labels{
+        display: block;
+        flex-wrap: nowrap;
+        margin-left: -2rem !important;
+        padding-left: 0% !important;
+        margin-top: -402px;
+    }
+    .skwed__imd__labels h4{
+        padding-right: 0rem;
+    }
+    
+    .img__label__fullstack{
+        padding-left: 114px;
+        padding-top: 89px;
+    }
+    .img__label__backend{
+        padding-left: 7.4rem;
+        padding-right: 0 !important;
+        padding-top: 8.9rem;
+    }
+    .img__label__DSALGO{
+        padding-left: 9.1rem;
+        padding-top: 0px;
+        margin-top: 0px;
+        position: relative;
+        top: -67px;
+    }
+
+}
+
+
+
+@media(max-width: 360px){
+
+    .main__intro__name{
+        height: 44vh;
+        padding-top: 7rem;
+        padding-bottom: 13rem;
+        margin-bottom: -15rem;
+    }
+    
+    .skwedpath{
+        height: 139vh;
+        margin-top: 5rem;
+        background-color: #f9f9f9;
+        width: 100%;
+        clip-path: polygon(0% 17%, 100% 0px, 100% 84%, 0px 100%);
+    }
+
+    .skwed__imd__labels{
+        margin-left: -4rem;
+        padding-left: 13%;
+    }
+
+    .main__section__skwed h1{
+        color: black;
+        padding-top: 120px;
+        margin-left: 9.5rem;
+        font-size: 30px;
+    }
+
+    .skills__div{
+        display: block;
+        flex-wrap: nowrap;
+        margin: 0rem 8.6rem;
         padding-top: 45px;
     }
 
