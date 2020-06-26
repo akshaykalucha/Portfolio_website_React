@@ -84,3 +84,30 @@
 
 
 }
+
+
+
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2) { 
+
+
+    .main__heading-outro{
+        margin-top: 5rem;
+        margin-left: 40%;
+        font-size: 17px;
+        padding-top: 6rem;
+        margin-bottom: 3rem;
+    }
+    .item1-outro{
+        padding-top: 2rem;
+    }
+    .item2-outro{
+        padding-top: 3rem;
+    }
+    .item3-outro{
+        padding-top: 3rem;
+    }
+
+}

@@ -14,7 +14,7 @@
     position: relative;
     font-size: 20px;
     left: 77rem;
-    top: -229px;
+    top: -263px;
 }
 
 .testimonials-h1{
@@ -56,7 +56,7 @@
     .testimonial__card{
         margin-bottom: 4rem;
         margin-top: 8rem;
-        margin-top: -11rem;
+        margin-top: -12rem;
     }
     
     .testimonial__button-prev{
@@ -106,5 +106,21 @@
     }
 
 
+
+}
+
+
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2) { 
+
+    .testimonial__button-next{
+        position: relative;
+        font-size: 17px;
+        left: 398px;
+        top: -177px;
+        z-index: 0;
+    }
 
 }

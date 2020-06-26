@@ -97,7 +97,7 @@
         width: 89%;
         margin: 0 auto;
         padding-bottom: 10rem;
-        margin-bottom: -12rem;
+        margin-bottom: -13rem;
     }
     
     .featured__work{
@@ -152,7 +152,6 @@
         line-height: 1.46429em;
         color: rgb(33, 33, 33);
         margin-bottom: 1rem;
-        font-family: roboto;
     }
     
     .container_card{

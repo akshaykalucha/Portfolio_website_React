@@ -320,3 +320,34 @@
     }
 
 }
+
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px)
+    and (-webkit-device-pixel-ratio: 2) { 
+
+        .inquiry__linkedin{
+            position: relative;
+            top: 10px;
+            right: 400px;
+            left: 0;
+            padding-left: 7rem;
+        }
+
+        .linkedin__inquiry-img{
+            position: relative;
+            top: 2px !important;
+            left: 0;
+        }
+
+        .somewhere{
+            margin-top: 3rem;
+            font-size: 22px;
+            margin-left: 50px;
+        }
+
+        .web__inquiry__main{
+            margin-left: 40.2px;
+        }   
+
+    }

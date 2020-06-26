@@ -47,7 +47,7 @@
 .NavLinks__ul li{
     padding-bottom: 1rem;
     font-weight: 400;
-    font-family: roboto;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 }
 
 .links__ul{
@@ -186,29 +186,30 @@
     
     .SM__links-github{
         position: relative;
-        top: -27px;
-        left: 83px;
+        top: -8px;
+        left: 73px;
     }
     
     .SM__links-linkedin{
         position: relative;
-        top: -46px;
-        left: 128px;
+        top: -20px;
+        left: 118px;
     }
     
     .SM__links-twitter{
         position: relative;
-        top: -4px;
-        left: 42px;
+        top: 4px;
+        left: 32px;
     }
     .SM__links-snapchat{
         position: relative;
         top: 15px;
+        left: -3px;
     }
     .SM__links-instagram{
         position: relative;
-        bottom: 67.5px;
-        left: 169px;
+        top: -31.6px !important;
+        left: 155px;
     }
     
     .NavLinks__ul{
@@ -222,7 +223,7 @@
     .NavLinks__ul li{
         padding-bottom: 1rem;
         font-weight: 400;
-        font-family: roboto;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif !important;
     }
 
 
@@ -334,3 +335,46 @@
     }
 
 }
+
+
+
+/* @media only screen 
+and (device-width: 414px) 
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2) { 
+
+    .SM__links-github{
+        position: relative;
+        top: -8px;
+        left: 73px;
+    }
+
+    .SM__links-linkedin{
+        top: -20px;
+        left: 118px;
+    }
+
+    .SM__links-snapchat{
+        left: -9px;
+    }
+
+    .SM__links-twitter{
+        top: 4px;
+        left: 32px;
+    }
+
+    .SM__links-instagram{
+        top: -31.6px !important;
+        left: 155px;
+    }
+
+    .NavLinks__ul li{
+        padding-bottom: 1rem;
+        font-weight: 400;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif !important;
+    }
+
+} */
+
+
+    /* -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; */
