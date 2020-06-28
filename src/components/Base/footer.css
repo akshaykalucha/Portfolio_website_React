@@ -186,30 +186,30 @@
     
     .SM__links-github{
         position: relative;
-        top: -8px;
-        left: 73px;
+        top: -21px;
+        left: 80px;
     }
     
     .SM__links-linkedin{
         position: relative;
-        top: -20px;
-        left: 118px;
+        top: -37px;
+        left: 122px;
     }
     
     .SM__links-twitter{
         position: relative;
-        top: 4px;
-        left: 32px;
+        top: -1.6px;
+        left: 39px;
     }
     .SM__links-snapchat{
         position: relative;
         top: 15px;
-        left: -3px;
+        left: -2px;
     }
     .SM__links-instagram{
         position: relative;
-        top: -31.6px !important;
-        left: 155px;
+        top: -54.6px !important;
+        left: 160px;
     }
     
     .NavLinks__ul{

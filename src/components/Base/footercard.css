@@ -270,18 +270,18 @@
 
         .footer-heading__card{
             color: rgb(21, 23, 26);
-            font-size: 29px;
+            font-size: 27px;
             line-height: 1;
-            padding-left: 3.5rem;
+            padding-left: 1.8rem;
             padding-top: 37px;
             margin-bottom: 9px;
         }
 
         .footer-subheading__card{
             margin: 0;
-            font-size: 15.9px !important;
+            font-size: 13.9px !important;
             color: rgb(115 138 148);
-            padding-left: 25px !important;
+            padding-left: 18px !important;
         }
 
         .footer-subheading__card{

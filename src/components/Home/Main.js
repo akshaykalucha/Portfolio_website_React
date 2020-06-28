@@ -1,13 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component, lazy, Suspense } from 'react'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
-import Index from './Index'
-import About from '../About/About'
-import ContactForm from '../Contact/ContactForm'
 import Nav from '../Base/Nav';
 import Footer from '../Base/Footer'
-import BlogMain from '../Blog/BlogMain'
-import Software from '../Software/Software'
 import ScrollTop from '../Base/ScrollTop'
+
+
+
+const IndexComponent = (
+    lazy(()=> (
+        import ('./Index')
+    ))
+)
+
+const AboutComponent = (
+    lazy(() => (
+      import('../About/About')
+    ))
+)
+const SoftwareComponent = (
+    lazy(() => (
+      import('../Software/Software')
+    ))
+)
+const ContactComponent = (
+    lazy(() => (
+      import('../Contact/ContactForm')
+    ))
+)
+const BlogComponent = (
+    lazy(() => (
+      import('../Blog/BlogMain')
+    ))
+)
+
+const LoadingMessage = () => (
+    "I'm loading..."
+)
+  
 
 export default class Main extends Component {
     render() {
@@ -16,13 +45,17 @@ export default class Main extends Component {
             <ScrollTop />
             <div style={{height: '100%'}}>
             <Nav />
-                    <Switch>
-                        <Route path="/" exact component={Index} />
-                        <Route path="/about" exact component={About} />
-                        <Route path="/contact" exact component={ContactForm} />
-                        <Route path="/blog" exact component={BlogMain} />
-                        <Route path="/software" exact component={Software} />
-                    </Switch>
+                    <Suspense fallback={<LoadingMessage />}>
+                        <Switch>
+                            <Route path="/" exact component={IndexComponent} />
+                            <Route path="/about">
+                                <AboutComponent />
+                            </Route>
+                            <Route path="/contact" exact component={ContactComponent} />
+                            <Route path="/blog" exact component={BlogComponent} />
+                            <Route path="/software" exact component={SoftwareComponent} />
+                        </Switch>
+                    </Suspense>
                 <Footer />
             </div>
             </Router>

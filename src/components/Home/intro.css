@@ -469,7 +469,7 @@ and (-webkit-device-pixel-ratio: 2) {
 
 
 
-    .skwed__imd__labels h4{
+    /* .skwed__imd__labels h4{
         padding-right: 0rem;
         margin-left: 0;
     }
@@ -492,6 +492,6 @@ and (-webkit-device-pixel-ratio: 2) {
     }
     .main__section__skwed h1{
         padding-top: 190px;
-    }
+    } */
 
 }

@@ -61,8 +61,8 @@
     
     .testimonial__button-prev{
         position: relative;
-        font-size: 17px;
-        top: 87px;
+        font-size: 20px;
+        top: 77px;
         left: 2px;
         z-index: 0;
     }
@@ -115,12 +115,12 @@ and (device-width: 414px)
 and (device-height: 896px)
 and (-webkit-device-pixel-ratio: 2) { 
 
-    .testimonial__button-next{
+    /* .testimonial__button-next{
         position: relative;
         font-size: 17px;
         left: 398px;
         top: -177px;
         z-index: 0;
-    }
+    } */
 
 }

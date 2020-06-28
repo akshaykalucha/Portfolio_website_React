@@ -15,7 +15,7 @@
 .work__card{
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
-    border-radius: 2px;
+    border-radius: 4px;
     background: rgb(255, 255, 255);
     transition: all 0.3s ease 0s;
     height: 26rem;
@@ -110,7 +110,7 @@
     .work__card{
         height: 100%;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
-        border-radius: 2px;
+        border-radius: 4px;
         background: rgb(255, 255, 255);
         transition: all 0.3s ease 0s;
         height: 28rem;

@@ -4,6 +4,7 @@ import skill1 from './icon1.svg'
 import skill2 from './icon4.svg'
 import skill3 from './icon5.svg'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
 function Intro(props)  {
 
@@ -17,7 +18,7 @@ function Intro(props)  {
                     </p><br/>
                     <div className="neon__buttons__color">
                         <a href="/" className="view__resume">View Resume</a>
-                        <a href="/" className="neon__button-contact">Get In Touch</a>
+                        <NavLink className="neon__button-contact" to="/contact">Get In Touch</NavLink>
                     </div>
                 </section>
                 <section  style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a"} : null } className="skwedpath">
