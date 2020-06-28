@@ -1,6 +1,7 @@
 {
   "name": "react_portfolio_website",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.14",
@@ -22,6 +23,7 @@
     "redux": "^4.0.5",
     "regex": "^0.1.1",
     "sal.js": "^0.7.6",
+    "serve": "^11.3.2",
     "styled-components": "^5.1.0",
     "typeface-roboto": "0.0.75"
   },

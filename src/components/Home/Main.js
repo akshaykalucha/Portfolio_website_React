@@ -41,7 +41,7 @@ const LoadingMessage = () => (
 export default class Main extends Component {
     render() {
         return (
-            <Router>
+            <Router basename="/">
             <ScrollTop />
             <div style={{height: '100%'}}>
             <Nav />
