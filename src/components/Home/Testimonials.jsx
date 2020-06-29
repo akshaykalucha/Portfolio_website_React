@@ -67,7 +67,7 @@ class Testimonials extends Component {
 
                 <div className="glider testimonial__glider-main">
                     <figure>
-                        <p style={ this.props.isDarknessStore ? {color: "white"} : null } className="testimonials__quote-1">"Akshay is actually a wonderful person, I've known him for a while now. He's a very humble person, he helps me like all the time! I got the chance to meet him and attend his talk in the ZEIT Community Meetup held in Casablanca, talking about Gatsby!"</p>
+                        <p style={ this.props.isDarknessStore ? {color: "white"} : null } className="testimonials__quote-1">"It was fantastic to work with Akshay, he is motivated, energetic and always ready to complete his tasks he is loyal, enthusiastic and creative. He worked with me for the graphics and creatives of Youth Conclave Reloaded and made sure that everything left with a smile. Kudos.!"</p>
                         <h4 style={ this.props.isDarknessStore ? {color: "white"} : null }>Aman Gupta</h4>
                     </figure>
                     <figure>

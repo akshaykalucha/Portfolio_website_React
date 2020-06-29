@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Intro from './Intro'
 import Outro from './Outro'
 import MyWork from './MyWork'
-import Testimonials from './Testimonials'
+// import Testimonials from './Testimonials'
 import FeaturedWork from './FeaturedWork'
 import BlogArticle from './BlogArticle'
 
@@ -19,7 +19,7 @@ export class Index extends Component {
                 <MyWork />
                 <FeaturedWork />
                 <Outro />
-                <Testimonials />
+                {/* <Testimonials /> */}
                 <BlogArticle />
             </div>
         )

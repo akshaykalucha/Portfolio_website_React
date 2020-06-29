@@ -3,6 +3,9 @@ import './featuredwork.css'
 // import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { connect } from 'react-redux'
+import AIHASH from '../assets/AI-hashtags.png'
+import SPAM from '../assets/SPAM.ppm'
+import pathfinding from '../assets/Pathfinding.png'
 
 
 
@@ -65,45 +68,45 @@ function FeaturedWork(props) {
                         <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a", boxShadow: "none"} : null } className="work__card">
                             <div className="card__main-heading">
                                 <h1 style={ props.isDarknessStore ? {color: "white"} : null }>
-                                    Catchit 1.0
+                                    AI-Hashtags
                                 </h1>
                                 <div onTouchStart={e=>scalezoom(e)} className="card-image">
                                     <picture>
-                                        <img src="https://smakosh.com/static/2a6a2fe9035f56572ff11a4368086561/f4ab0/catchit.jpg" alt=""/>
+                                        <img src={AIHASH} alt=""/>
                                     </picture>
                                 </div>
                                 <div className="card__info-footer">
-                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
+                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>See trends & generate popular tweets using automatic tweet generator tool!</p>
                                 </div>
                             </div>
                         </div>
                         <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a", boxShadow: "none"} : null } className="work__card">
                             <div className="card__main-heading">
                                 <h1 style={ props.isDarknessStore ? {color: "white"} : null }>
-                                    Catchit 1.0
+                                    SVM Spam Detection
                                 </h1>
                                 <div className="card-image">
                                     <picture>
-                                        <img src="https://smakosh.com/static/2a6a2fe9035f56572ff11a4368086561/f4ab0/catchit.jpg" alt=""/>
+                                        <img src={SPAM} alt=""/>
                                     </picture>
                                 </div>
                                 <div className="card__info-footer">
-                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
+                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Take detecting spam emails to another level by running a script on your PC and instantly get spam updates.</p>
                                 </div>
                             </div>
                         </div>
                         <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a", boxShadow: "none"} : null } className="work__card">
                             <div className="card__main-heading">
                                 <h1 style={ props.isDarknessStore ? {color: "white"} : null }>
-                                    Catchit 1.0
+                                    A* Path Finding visualization
                                 </h1>
                                 <div className="card-image">
                                     <picture>
-                                        <img src="https://smakosh.com/static/2a6a2fe9035f56572ff11a4368086561/f4ab0/catchit.jpg" alt=""/>
+                                        <img src={pathfinding} alt=""/>
                                     </picture>
                                 </div>
                                 <div className="card__info-footer">
-                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>Collect stars & avoid obstacles while trying to put the ball into the right basket to unlock new levels!</p>
+                                    <p style={ props.isDarknessStore ? {color: "white"} : null }>This is my first attempt at A* pathfinding. I made this visualization to show the beauty of pathfinding. You can modify all..</p>
                                 </div>
                             </div>
                         </div>

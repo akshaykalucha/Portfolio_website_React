@@ -44,6 +44,7 @@
 .card-image{
     position: relative;
     overflow: hidden;
+    height: 249px;
 }
 .card-image img{
     width: 100%;
@@ -132,6 +133,7 @@
     .card-image{
         position: relative;
         overflow: hidden;
+        height: 276px;
     }
     .card-image img{
         width: 100%;
