@@ -217,6 +217,21 @@
         height: 23px;
         cursor: pointer;
     }
+
+
+/*
+        .tag{
+        margin: 0px 1rem 1rem 0px;
+        opacity: 1;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        font-size: 14px;
+        transition: all 0.3s ease 0s;
+        color: rgb(255, 255, 255);
+        height: 17px;
+        cursor: pointer;
+    }
+*/
     
     .tag:hover{
         opacity: 0.8;
@@ -299,18 +314,18 @@
         overflow-y: hidden;
         margin-bottom: 0.5rem !important;
         margin-left: 0 !important;
-        padding-left: 15px !important;
+        padding-left: 10px !important;
     }
 
     .tag{
-        margin: 0px 1rem 1rem 0px;
+        margin: 0px 0.3rem 1rem 0px;
         opacity: 1;
         padding: 0.1rem 0.8rem !important;
         border-radius: 50px;
-        font-size: 14px !important;
+        font-size: 13px !important;
         transition: all 0.3s ease 0s;
         color: rgb(255, 255, 255);
-        height: 23px !important;
+        height: 21px !important;
         cursor: pointer;
     }
 
@@ -368,7 +383,7 @@ and (-webkit-device-pixel-ratio: 2) {
         font-size: 14px;
         transition: all 0.3s ease 0s;
         color: rgb(255, 255, 255);
-        height: 15px;
+        height: 20px;
         cursor: pointer;
     }
 
