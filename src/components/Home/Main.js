@@ -3,7 +3,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import Nav from '../Base/Nav';
 import Footer from '../Base/Footer'
 import ScrollTop from '../Base/ScrollTop'
-
+import Loading from './Loading'
 
 
 const IndexComponent = (
@@ -34,7 +34,7 @@ const BlogComponent = (
 )
 
 const LoadingMessage = () => (
-    "I'm loading..."
+    <Loading />
 )
   
 
