@@ -1,111 +1,69 @@
 import React from 'react'
 import './Testmonials2.css'
+import { connect } from 'react-redux'
 
-const Testmonials2 = () => {
+const Testmonials2 = (props) => {
+    
     return (
         <div>
-            <div className="col-12 popo">
-                <ul className="carousel-simple">
-                    <li>
-                        <input checked="checked" id="item-1" type="radio" name="toggle" className="carausel-toggle"/>
-                        <label htmlFor="item-1" className="dot"></label>
-                        <ul className="carousel-content">
-                            <div className="info col-2">
-                                <p>“2 Parallax hace que sea más fácil dar instrucciones a personas que requieren asistencia en tiempo real para equipos sensibles ¡Sin la necesidad de viajar! Reduce en gran medida los costos de mantenimiento.”</p>
-                                <div className="author">
-                                    <div className="img-container"><img src="http://mouse.latercera.com/wp-content/uploads/2018/05/steven-1.jpg" alt=""/></div>
-                                    <div>
-                                        <h3>Caroline Gonzalez Flowers</h3>
-                                        <span>CEO de Transtelco</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <li>
-                                <label htmlFor="item-1" className="arrow back">
-                                    <img src="https://image.flaticon.com/icons/svg/126/126492.svg" alt=""/>
-                                </label>
-                                <label htmlFor="item-3" className="arrow next">
-                                    <img src="https://image.flaticon.com/icons/svg/118/118740.svg" alt=""/>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <input type="radio" id="item-2" name="toggle" className="carousel-toggle"/>
-                        <label className="dot" htmlFor="item-2"></label>
-                        <ul className="carousel-content">
-                        <div className="info col-12">
-                            <p>“2 Parallax hace que sea más fácil dar instrucciones a personas que requieren asistencia en tiempo real para equipos sensibles ¡Sin la necesidad de viajar! Reduce en gran medida los costos de mantenimiento.”</p>
-                            <div className="author">
-                                <div className="img-container"><img src="http://mouse.latercera.com/wp-content/uploads/2018/05/steven-1.jpg" alt=""/></div>
-                                <div>
-                                    <h3>Caroline Gonzalez Flowers</h3>
-                                    <span>CEO de Transtelco</span>
-                                </div>
-                            </div>
+            <div style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="testimonials_card">
+            <div className="card">
+                <input className="input_card" type="radio" name="select" defaultChecked={true} id="slide_1" />
+                <input className="input_card" type="radio" name="select" id="slide_2" />
+                <input className="input_card" type="radio" name="select" id="slide_3" />
+                <input className="input_card"  type="checkbox" id="slideImg"/>
+
+                <div className="slider">
+                    <label htmlFor="slide_1" className="slide slide_1"></label>
+                    <label htmlFor="slide_2" className="slide slide_2"></label>
+                    <label htmlFor="slide_3" className="slide slide_3"></label>
+                </div>
+                <div className="inner_part">
+                    <label htmlFor="slideImg" className="img">
+                        <img className="img_1" src="https://c4.wallpaperflare.com/wallpaper/978/131/617/kiz-kulesi-turkey-istanbul-maiden-s-tower-wallpaper-preview.jpg" alt=""/>
+                    </label>
+                    <div className="content content_1">
+                        <div className="title">istanbul</div>
+                        <div className="text">
+                        Istanbul, a fascinating city built on two Continents, divided by the Bosphorus Strait. This is one of the greatest cities in the world.
                         </div>
-                        <li>
-                            <label htmlFor="item-1" className="arrow back">
-                                <img src="https://image.flaticon.com/icons/svg/126/126492.svg" alt=""/>
-                            </label>
-                            <label htmlFor="item-3" className="arrow next">
-                                <img src="https://image.flaticon.com/icons/svg/118/118740.svg" alt=""/>
-                            </label>
-                        </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <input name="toggle" id="item-3" type="radio" className="carousel-toggle"/>
-                        <label htmlFor="item-3" className="dot"></label>
-                        <ul className="carousel-content">
-                            <div className="info col-12">
-                                <p>"3 Parallax hace que sea más fácil dar instrucciones a personas que requieren asistencia en tiempo real para equipos sensibles ¡Sin la necesidad de viajar! Reduce en gran medida los costos de mantenimiento.”</p>
-                                <div className="author">
-                                    <div className="img-container"><img src="http://mouse.latercera.com/wp-content/uploads/2018/05/steven-1.jpg" alt=""/></div>
-                                    <div>
-                                        <h3>Caroline Gonzalez Flowers</h3>
-                                        <span>CEO de Transtelco</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <li>
-                                <label htmlFor="item-2" className="arrow back">
-                                    <img src="https://image.flaticon.com/icons/svg/126/126492.svg" alt=""/>
-                                </label>
-                                <label htmlFor="item-4" className="arrow next">
-                                    <img src="https://image.flaticon.com/icons/svg/118/118740.svg" alt=""/>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <input name="toggle" id="item-4" type="radio" className="carousel-toggle"/>
-                        <label className="dot" htmlFor="item-4"></label>
-                        <ul className="carousel-content">
-                            <div className="info col-12">
-                                <p>“ 4 Parallax hace que sea más fácil dar instrucciones a personas que requieren asistencia en tiempo real para equipos sensibles ¡Sin la necesidad de viajar! Reduce en gran medida los costos de mantenimiento.”</p>
-                                <div className="author">
-                                    <div className="img-container"><img src="http://mouse.latercera.com/wp-content/uploads/2018/05/steven-1.jpg" alt=""/></div>
-                                    <div>
-                                        <h3>Caroline Gonzalez Flowers</h3>
-                                        <span>CEO de Transtelco</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <li>
-                                <label htmlFor="item-3" className="arrow back">
-                                    <img src="https://image.flaticon.com/icons/svg/126/126492.svg" alt=""/>
-                                </label>
-                                <label className="arrow next" htmlFor="item-1">
-                                    <img src="https://image.flaticon.com/icons/svg/118/118740.svg" alt=""/>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                        <button>Read More</button>
+                    </div>
+                </div>
+                <div className="inner_part">
+                    <label htmlFor="slideImg" className="img">
+                        <img className="img_2" src="https://c4.wallpaperflare.com/wallpaper/649/96/56/ankara-cityscape-night-night-sky-wallpaper-preview.jpg" alt=""/>
+                    </label>
+                    <div className="content content_2">
+                        <div className="title">Ankara</div>
+                        <div className="text">
+                        Ankara is Turkey's beating heart, second largest city, located in the Central Anatolia region and home to the Grand National Assembly of Turkey.
+                        </div>
+                        <button>Read More</button>
+                    </div>
+                </div>
+                <div className="inner_part">
+                    <label htmlFor="slideImg" className="img">
+                        <img className="img_3" src="https://c4.wallpaperflare.com/wallpaper/620/34/558/turkey-izmir-mountains-wallpaper-preview.jpg" alt=""/>
+                    </label>
+                    <div className="content content_3">
+                        <div className="title">izmir</div>
+                        <div className="text">
+                        Located on the shores of the Aegean Sea, west of the Anatolian Peninsula, İzmir is the third-largest city in Turkey.
+                        </div>
+                        <button>Read More</button>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     )
 }
 
-export default Testmonials2
+const mapStateToProps = state => {
+    return {
+        isDarknessStore: state.isDark
+    }
+}
+
+export default connect(mapStateToProps)(Testmonials2)

@@ -7,9 +7,6 @@ import { connect } from 'react-redux'
 class Testimonials extends Component {
 
 
-    state={
-        isMobile: false
-    }
 
     componentDidMount() {
         window.addEventListener("resize", this.resize.bind(this));
@@ -17,9 +14,8 @@ class Testimonials extends Component {
     }
     
     resize() {
-        let currentHideNav = (window.innerWidth <= 760);
-        if (currentHideNav) {
-            this.setState({isMobile: !this.state.isMobile});
+        if (this.props.isMobileStore) {
+            //Mobile
             new Glider(document.querySelector('.glider'), {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -35,8 +31,8 @@ class Testimonials extends Component {
                 scrollLockDelay: 30
             });
         }
-        else{
-            this.setState({isMobile: false})
+        else if(this.props.isMobileStore===false){
+            //Desktop
             new Glider(document.querySelector('.glider'), {
                 slidesToShow: 3.5,
                 slidesToScroll: 3,
@@ -112,6 +108,7 @@ class Testimonials extends Component {
 
 const mapStateToProps = state => {
     return {
+        isMobileStore: state.isMobile,
         isDarknessStore: state.isDark
     }
 }
