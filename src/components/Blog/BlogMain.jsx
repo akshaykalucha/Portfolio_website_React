@@ -7,6 +7,10 @@ import './blogmain.css'
 // import parse from 'html-react-parser';
 
 
+var Size = Quill.import('attributors/style/size');
+Size.whitelist = ['14px', '16px', '18px', '20px', '21px', '22px', '24px', '26px'];
+Quill.register(Size, true);
+
 class BlogMain extends Component {
 
     state = {
@@ -55,6 +59,7 @@ class BlogMain extends Component {
       [{ 'indent': '-1'}, { 'indent': '+1' }],         // outdent/indent
       [{ 'direction': 'rtl' }],                        // text direction
       // [{ 'size': ['small', false, 'large', 'huge'] }], // custom dropdown
+      [{ 'size': ['14px', '16px', '18px', '20px', '21px', '22px', '24px', '26px'] }],
       // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],       // header dropdown
       [{ 'color': [] }, { 'background': [] }],         // dropdown with defaults
       [{ 'font': [] }],                                // font family
@@ -66,7 +71,7 @@ class BlogMain extends Component {
       'header', 'font', 'background', 'color', 'code', 'size',
       'bold', 'italic', 'underline', 'strike', 'blockquote', 'image',
       'list', 'bullet', 'indent', 'script', 'align', 'direction',
-      'link', 'image', 'code-block', 'formula', 'video'
+      'link', 'image', 'code-block', 'formula', 'video', 'size'
     ]
 
 
@@ -84,11 +89,14 @@ class BlogMain extends Component {
               <button type="submit">Submit Content</button>
             </div>
 
-            <ReactQuill
-              value={this.state.deltaData}
-              readOnly={true}
-              theme={"bubble"}
-            />
+            <div className="quilltextview">
+              <ReactQuill
+                value={this.state.deltaData}
+                readOnly={true}
+                theme={"bubble"}
+              />
+            </div>
+
       </div>
     );
   }
