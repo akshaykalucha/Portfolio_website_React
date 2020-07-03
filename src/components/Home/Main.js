@@ -27,17 +27,17 @@ const ContactComponent = (
       import('../Contact/ContactForm')
     ))
 )
-const BlogComponent = (
-    lazy(() => (
-      import('../Blog/BlogMainfunc')
-    ))
-)
+// const BlogComponent = (
+//     lazy(() => (
+//       import('../Blog/BlogMainfunc')
+//     ))
+// )
 
-const BlogPage = (
-    lazy(() => (
-        import('../Blog/BlogMain')
-    ))
-)
+// const BlogPage = (
+//     lazy(() => (
+//         import('../Blog/BlogMain')
+//     ))
+// )
 
 const BlogContent = (
     lazy(() => (
@@ -64,9 +64,7 @@ export default class Main extends Component {
                                 <AboutComponent />
                             </Route>
                             <Route path="/contact" exact component={ContactComponent} />
-                            <Route path="/blog" exact component={BlogComponent} />
                             <Route path="/software" exact component={SoftwareComponent} />
-                            <Route path="/MyBlogPage" exact component={BlogPage} />
                             <Route path="/MyBlogContent" exact component={BlogContent} />
                         </Switch>
                     </Suspense>
