@@ -29,7 +29,7 @@ class BlogMain extends Component {
       this.setState({
         deltaData: editor.getContents()
       })
-      console.log(this.state.text)
+      // console.log(typeof(this.state.deltaData))
 
 
       //---> getting text from editor
@@ -38,6 +38,11 @@ class BlogMain extends Component {
       // this.inpText = unprivilegedEditor.getText();
       // console.log("unprivilegedEditor.getText()", unprivilegedEditor.getText());
       //----<
+    }
+
+    handleSubmit = (event) => {
+      event.preventDefault()
+      console.log(this.state.deltaData)
     }
 
   render() {
@@ -85,9 +90,6 @@ class BlogMain extends Component {
                 formats={BlogMain.formats} modules={BlogMain.modules}
                 ref={(el) => { this.reactQuillRef = el }} />
             </div>
-            <div className="submitButton">
-              <button type="submit">Submit Content</button>
-            </div>
 
             <div className="quilltextview">
               <ReactQuill
@@ -95,6 +97,10 @@ class BlogMain extends Component {
                 readOnly={true}
                 theme={"bubble"}
               />
+            </div>
+
+            <div className="submitButton">
+              <button type="submit" onClick={event => this.handleSubmit(event)}>Submit Content</button>
             </div>
 
       </div>

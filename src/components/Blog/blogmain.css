@@ -2,13 +2,16 @@
     width: 850px;
     margin: auto;
     margin-top: 9rem;
-    margin-bottom: -13rem;
 }
 
 .quilltextview{
-    position: relative;
-    top: 15rem;
     margin: auto;
     width: 850px;
-    margin-bottom: 11rem;
+    margin-top: 3rem;
+}
+
+.submitButton{
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
 }
