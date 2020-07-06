@@ -3,8 +3,10 @@ import 'react-quill/dist/quill.snow.css'
 import 'react-quill/dist/quill.bubble.css'
 import ReactQuill, { Quill } from 'react-quill'
 import './blogmain.css'
-import CircularProgress from '@material-ui/core/CircularProgress';
+// import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
+import $ from 'jquery';
+
 
 
 var Size = Quill.import('attributors/style/size');
@@ -17,14 +19,110 @@ class BlogMain extends Component {
         title: '',
         deltaData : null,
         returnedDelta: null,
-        progress: false
+        progress: false,
+        tag1: '',
+        tag2: '',
+        tag3: ''
     }
 
 
     handleInput = (event) => {
+      console.log("redfghjm,")
       this.setState({
         [event.target.name]: event.target.value
       })
+    }
+
+    componentDidMount(){
+      let _this = this;
+      $('select[data-menu]').each(function() {
+        /* eslint-disable */
+        let select = $(this),
+            type = select.data('menu'),
+            menu = $('<div />').addClass('select-menu ' + type),
+            button = $('<button />'),
+            buttonDiv = $('<div />'),
+            current = $('<span />').text(select.find('option:selected').text()).appendTo(buttonDiv),
+            arrow = $('<em />').prependTo(button);
+        
+        button.css({
+            '--h': select.outerHeight(),
+            '--w': select.outerWidth()
+        });
+    
+        select.wrap(menu);
+    
+        button.append(buttonDiv).insertAfter(select);
+    
+    });
+    
+    $(document).on('click', '.select-menu', function(e) {
+      console.log("selecteddd")
+    
+        let menu = $(this),
+            select = menu.children('select'),
+            options = select.find('option'),
+            active = select.find('option:selected'),
+            button = menu.children('button'),
+            buttonDiv = button.children('div'),
+            current = buttonDiv.children('span');
+        // console.log(menu[0].innerText)
+        // console.log(current[0].innerText)
+        if(!menu.hasClass('change')) {
+    
+            let nextOption = options.eq(active.index() === options.length - 1 ? 0 : active.index() + 1),
+                next = $('<span />').addClass('next').text(nextOption.text()).appendTo(buttonDiv);
+            console.log(nextOption[0].value)
+            console.log(nextOption[0].innerHTML)
+            if(nextOption[0].value=== "val1"){
+                _this.setState(state => {
+                  var tag1 = state.tag1
+                  tag1 = nextOption[0].innerHTML;
+                  return {
+                    tag1,
+                  };
+                });
+
+            }
+
+            if(nextOption[0].value=== "val2"){
+              _this.setState(state => {
+                var tag2 = state.tag2
+                tag2 = nextOption[0].innerHTML;
+                return {
+                  tag2,
+                };
+              });
+
+          }
+
+          if(nextOption[0].value=== "val3"){
+            _this.setState(state => {
+              var tag3 = state.tag3
+              tag3 = nextOption[0].innerHTML;
+              return {
+                tag3,
+              };
+            });
+
+        }
+    
+            options.attr('selected', false);
+            nextOption.attr('selected', true);
+    
+            menu.addClass('change');
+    
+            setTimeout(() => {
+    
+                next.removeClass('next');
+                menu.removeClass('change');
+                current.remove();
+    
+            }, 650);
+    
+        }
+    
+    });
     }
 
 
@@ -73,10 +171,14 @@ class BlogMain extends Component {
         console.log(err)
       })
     }
+
+    handleSelects = () => {
+      console.log("changeddd")
+    }
     
 
   render() {
-    let Cirprogress = <CircularProgress />
+    // let Cirprogress = <CircularProgress />
     var SizeStyle = Quill.import('attributors/style/align')
     Quill.register(SizeStyle, true);
 
@@ -110,7 +212,6 @@ class BlogMain extends Component {
 
 
 
-
     return (
       <div>
             <div className="myEditor">
@@ -133,11 +234,50 @@ class BlogMain extends Component {
               />
             </div>
 
+              <div className="tagsd">
+                <div className="selecttags">
+                  <p>Select Tags:</p>
+                </div>
+                <div className="main_tags">
+
+                  <select onChange={event => this.handleSelects(event)} data-menu="vertical">
+                      <option value="val1" name="none" defaultValue>None</option>
+                      <option value="val1" name="Tech">Tech</option>
+                      <option value="val1" name="Dev">Dev</option>
+                      <option value="val1" name="Travel">Travel</option>
+                      <option value="val1" name="Bio">Bio</option>
+                      <option value="val1" name="React">React</option>
+                      <option value="val1" name="Stack">Stack</option>
+                  </select>
+
+                  <select data-menu="vertical">
+                      <option value="val2" defaultValue>None</option>
+                      <option value="val2">Tech</option>
+                      <option value="val2">Dev</option>
+                      <option value="val2">Travel</option>
+                      <option value="val2">Bio</option>
+                      <option value="val2">React</option>
+                      <option value="val2">Stack</option>
+                  </select>
+
+                  <select data-menu="vertical">
+                      <option value="val3" defaultValue>None</option>
+                      <option value="val3">Tech</option>
+                      <option value="val3">Dev</option>
+                      <option value="val3">Travel</option>
+                      <option value="val3">Bio</option>
+                      <option value="val3">React</option>
+                      <option value="val3">Stack</option>
+                  </select>
+
+                </div>
+              </div>
+
             <div className="submitButton">
               <button type="submit" onClick={event => this.handleSubmit(event)}>Submit Content</button>
               {this.state.progress ? 
                 <div className="cirLoading">
-                  {Cirprogress}
+                  {/* {Cirprogress} */}
                 </div>
                : null}
             </div>
