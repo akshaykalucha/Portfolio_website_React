@@ -3,7 +3,7 @@ import 'react-quill/dist/quill.snow.css'
 import 'react-quill/dist/quill.bubble.css'
 import ReactQuill, { Quill } from 'react-quill'
 import './blogmain.css'
-// import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 import $ from 'jquery';
 
@@ -148,6 +148,24 @@ class BlogMain extends Component {
       if(this.state.title.length <= 20){
         return alert("Blog title too small")
       }
+      var taglist = []
+      if(this.state.tag1 === "None" || this.state.tag1 === ""){
+          console.log()
+      }else{
+        taglist.push(this.state.tag1)
+      }
+      if(this.state.tag2 === "None" || this.state.tag2 === ""){
+        console.log()
+      }else{
+        taglist.push(this.state.tag2)
+      }
+      if(this.state.tag3 === "None" || this.state.tag3 === ""){
+        console.log()
+      }else{
+        taglist.push(this.state.tag3)
+      }
+
+      console.log(taglist, "seding to sevrer")
       this.setState({
         progress: true
       })
@@ -157,7 +175,7 @@ class BlogMain extends Component {
         'Access-Control-Allow-Origin': 'http://localhost:300'
       }
       axios.post(`http://localhost:8000/api/v1/backend1/test/`,
-       {title: this.state.title, deltaData: JSON.stringify(this.state.deltaData)},
+       {title: this.state.title, deltaData: JSON.stringify(this.state.deltaData), tags: taglist},
        {headers: headers, withCredentials: true, xsrfCookieName: 'csrftoken_testtest', xsrfHeaderName: 'X-CSRFToken',}
        )
       .then(res=> {
@@ -178,7 +196,7 @@ class BlogMain extends Component {
     
 
   render() {
-    // let Cirprogress = <CircularProgress />
+    let Cirprogress = <CircularProgress />
     var SizeStyle = Quill.import('attributors/style/align')
     Quill.register(SizeStyle, true);
 
@@ -277,7 +295,7 @@ class BlogMain extends Component {
               <button type="submit" onClick={event => this.handleSubmit(event)}>Submit Content</button>
               {this.state.progress ? 
                 <div className="cirLoading">
-                  {/* {Cirprogress} */}
+                  {Cirprogress}
                 </div>
                : null}
             </div>
