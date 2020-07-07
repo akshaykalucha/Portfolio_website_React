@@ -1,9 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import ReactQuill from 'react-quill'
-import 'react-quill/dist/quill.bubble.css';
+import './quill.bubble.css';
 import './BlogContent.css'
 import axios from 'axios';
 import Loading from '../Home/Loading'
+
+
+
+/*
+var loading = async() => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js";
+    // script.async = true;
+    // script.onload = () => alert("highlightjs1 loaded");
+
+    document.head.appendChild(script);
+
+    const link = document.createElement("link");
+    link.rel = "stylesheet"
+    link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css";
+    // link.async = true;
+    link.onload = () => console.log("highlightjs2 link load");
+    document.head.appendChild(link)
+    // setScripts(true)
+    setTimeout(
+        function(){
+            setScripts(true)
+        }, 5000
+    )
+}
+loading()
+*/
 
 
 function ConvLstToDate(arr){
@@ -21,14 +48,13 @@ function BlogContent() {
 
     const [BlogData, SetBlogData] = useState(null)
 
-
     let blogTitlt = ''
     useEffect(()=>{
         /*eslint-disable*/
         var blogTitleUrl = document.location.pathname.substring(document.location.pathname.lastIndexOf('/') + 1)
-        console.log(blogTitleUrl)
+        // console.log(blogTitleUrl)
         blogTitlt = blogTitleUrl
-        console.log(blogTitlt)
+        // console.log(blogTitlt)
         axios.get(`http://localhost:8000/api/v1/backend1/test1/${blogTitlt}/`)
         .then(res => {
             let genricDate = res.data.Data.Created.substring(0, res.data.Data.Created.indexOf('T')).split('-').reverse().join('/')
@@ -61,6 +87,7 @@ function BlogContent() {
                                 : tag==="dev" ? {backgroundColor: '#263238'}
                                 : tag==="travel" ? {backgroundColor: '#ff9800'}
                                 : tag==="bio" ? {backgroundColor: '#f44336'}
+                                : tag==="tech" ? {backgroundColor: '#666cdc'}
                                 : tag==="stack" ? {backgroundColor: "#8bc34a"}
                                 : null
                         } className="tag"><a className="tagLink" href="/">{tag}</a></div>

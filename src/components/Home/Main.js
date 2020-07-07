@@ -33,17 +33,17 @@ const BlogComponent = (
     ))
 )
 
-// const BlogPage = (
-//     lazy(() => (
-//         import('../Blog/BlogMain')
-//     ))
-// )
+const BlogPage = (
+    lazy(() => (
+        import('../Blog/BlogMain')
+    ))
+)
 
-// const BlogContent = (
-//     lazy(() => (
-//         import('../Blog/BlogContent')
-//     ))
-// )
+const BlogContent = (
+    lazy(() => (
+        import('../Blog/BlogContent')
+    ))
+)
 
 const LoadingMessage = () => (
     <Loading />
@@ -66,6 +66,8 @@ export default class Main extends Component {
                             <Route path="/contact" exact component={ContactComponent} />
                             <Route path="/blog" exact component={BlogComponent} />
                             <Route path="/software" exact component={SoftwareComponent} />
+                            <Route path="/MyBlogPage" exact component={BlogPage} />
+                            <Route path="/blog/:title" exact component={BlogContent} />
                         </Switch>
                     </Suspense>
                 <Footer />

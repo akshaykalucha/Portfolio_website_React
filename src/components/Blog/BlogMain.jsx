@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import 'react-quill/dist/quill.snow.css'
-import 'react-quill/dist/quill.bubble.css'
+import './quill.snow.css'
+// import './quill.bubble.css'
 import ReactQuill, { Quill } from 'react-quill'
 import './blogmain.css'
 import CircularProgress from '@material-ui/core/CircularProgress';

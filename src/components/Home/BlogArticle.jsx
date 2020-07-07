@@ -15,6 +15,8 @@ function BlogArticle(props) {
     const[devTag, setDevTag] = useState(null)
     const[travelTag, setTravelTag] = useState(null)
     const[bioTag, setBioTag] = useState(null)
+    const[stackTag, setStackTag] = useState(null)
+    const[techTag, setTechTag] = useState(null)
 
     const [cardContent, setCardContent] = useState(cardData)
 
@@ -41,6 +43,14 @@ function BlogArticle(props) {
                 }else if(tag==="bio"){
                     setBioTag({
                         backgroundColor: '#f44336'
+                    })
+                }else if(tag==="tech"){
+                    setTechTag({
+                        backgroundColor: '#666cdc'
+                    })
+                }else if(tag==="stack"){
+                    setStackTag({
+                        backgroundColor: '#8bc34a'
                     })
                 }
             })
@@ -83,6 +93,7 @@ function BlogArticle(props) {
                         <div className="cards">
                         {cardContent.map((content) => 
                             <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a"} : null } key={Math.random()} className="card-content">
+                                <a style={{textDecoration: "none",}} href={`blog/${content.link}`}>
                                 <div className="img-card">
                                     <div className="thumbnail">
                                         <img src={content.thumbnail} alt=""/>
@@ -102,6 +113,8 @@ function BlogArticle(props) {
                                                     tag==="gatsby" ? gatsbyTag
                                                     : tag==="react" ? reactTag
                                                     : tag==="dev" ? devTag
+                                                    : tag==="tech" ? techTag
+                                                    : tag==="stack" ? stackTag
                                                     : tag==="travel" ? travelTag
                                                     : tag==="bio" ? bioTag
                                                     : null
@@ -113,6 +126,7 @@ function BlogArticle(props) {
                                             <i style={ props.isDarknessStore ? {color: "white"} : null }>{content.date}</i>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         )}
                         </div>
