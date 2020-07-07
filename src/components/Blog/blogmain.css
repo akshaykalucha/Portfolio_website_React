@@ -18,7 +18,7 @@
 .quilltextview{
     margin: auto;
     width: 850px;
-    margin-top: 3rem;
+    margin-top: 9rem;
 }
 
 .postTitle{
@@ -68,6 +68,8 @@
 .tagsd{
     display: flex;
     flex-wrap: nowrap;
+    margin-top: 2rem;
+
 }
 
 .selecttags{

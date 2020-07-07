@@ -22,12 +22,12 @@ class BlogMain extends Component {
         progress: false,
         tag1: '',
         tag2: '',
-        tag3: ''
+        tag3: '',
+        successresp: false
     }
 
 
     handleInput = (event) => {
-      console.log("redfghjm,")
       this.setState({
         [event.target.name]: event.target.value
       })
@@ -57,7 +57,6 @@ class BlogMain extends Component {
     });
     
     $(document).on('click', '.select-menu', function(e) {
-      console.log("selecteddd")
     
         let menu = $(this),
             select = menu.children('select'),
@@ -72,8 +71,6 @@ class BlogMain extends Component {
     
             let nextOption = options.eq(active.index() === options.length - 1 ? 0 : active.index() + 1),
                 next = $('<span />').addClass('next').text(nextOption.text()).appendTo(buttonDiv);
-            console.log(nextOption[0].value)
-            console.log(nextOption[0].innerHTML)
             if(nextOption[0].value=== "val1"){
                 _this.setState(state => {
                   var tag1 = state.tag1
@@ -150,22 +147,24 @@ class BlogMain extends Component {
       }
       var taglist = []
       if(this.state.tag1 === "None" || this.state.tag1 === ""){
-          console.log()
+          
       }else{
         taglist.push(this.state.tag1)
       }
       if(this.state.tag2 === "None" || this.state.tag2 === ""){
-        console.log()
+        
       }else{
         taglist.push(this.state.tag2)
       }
       if(this.state.tag3 === "None" || this.state.tag3 === ""){
-        console.log()
+        
       }else{
         taglist.push(this.state.tag3)
       }
+      if(taglist.length === 0){
+        return alert("At least one tag is required")
+      }
 
-      console.log(taglist, "seding to sevrer")
       this.setState({
         progress: true
       })
@@ -181,17 +180,13 @@ class BlogMain extends Component {
       .then(res=> {
         this.setState({
           returnedDelta: JSON.parse(res.data.Data.deltaData),
-          progress: false
+          progress: false,
+          successresp: true
         })
-        console.log(res)
       })
       .catch(err=>{
         console.log(err)
       })
-    }
-
-    handleSelects = () => {
-      console.log("changeddd")
     }
     
 
@@ -232,7 +227,8 @@ class BlogMain extends Component {
 
     return (
       <div>
-            <div className="myEditor">
+        {!this.state.successresp ? <div className="mainblogcreate">
+          <div className="myEditor">
                 <h1 className="blogheading">Design a Blog:</h1>
                 <ReactQuill
                 theme="snow" onChange={this.handleChange}
@@ -244,14 +240,6 @@ class BlogMain extends Component {
               <input type="text" className="postTitle" name="title" value={this.state.title} onChange={event => this.handleInput(event)} />
             </div>
 
-            <div className="quilltextview">
-              <ReactQuill
-                value={this.state.returnedDelta}
-                readOnly={true}
-                theme={"bubble"}
-              />
-            </div>
-
               <div className="tagsd">
                 <div className="selecttags">
                   <p>Select Tags:</p>
@@ -260,32 +248,35 @@ class BlogMain extends Component {
 
                   <select onChange={event => this.handleSelects(event)} data-menu="vertical">
                       <option value="val1" name="none" defaultValue>None</option>
-                      <option value="val1" name="Tech">Tech</option>
-                      <option value="val1" name="Dev">Dev</option>
-                      <option value="val1" name="Travel">Travel</option>
-                      <option value="val1" name="Bio">Bio</option>
-                      <option value="val1" name="React">React</option>
-                      <option value="val1" name="Stack">Stack</option>
+                      <option value="val1" name="Tech">tech</option>
+                      <option value="val1" name="Dev">dev</option>
+                      <option value="val1" name="Travel">travel</option>
+                      <option value="val1" name="Bio">bio</option>
+                      <option value="val1" name="React">react</option>
+                      <option value="val1" name="Gatsby">gatsby</option>
+                      <option value="val1" name="Stack">stack</option>
                   </select>
 
                   <select data-menu="vertical">
                       <option value="val2" defaultValue>None</option>
-                      <option value="val2">Tech</option>
-                      <option value="val2">Dev</option>
-                      <option value="val2">Travel</option>
-                      <option value="val2">Bio</option>
-                      <option value="val2">React</option>
-                      <option value="val2">Stack</option>
+                      <option value="val2">tech</option>
+                      <option value="val2">dev</option>
+                      <option value="val2">travel</option>
+                      <option value="val2">bio</option>
+                      <option value="val2">react</option>
+                      <option value="val1" name="Gatsby">gatsby</option>
+                      <option value="val2">stack</option>
                   </select>
 
                   <select data-menu="vertical">
                       <option value="val3" defaultValue>None</option>
-                      <option value="val3">Tech</option>
-                      <option value="val3">Dev</option>
-                      <option value="val3">Travel</option>
-                      <option value="val3">Bio</option>
-                      <option value="val3">React</option>
-                      <option value="val3">Stack</option>
+                      <option value="val3">tech</option>
+                      <option value="val3">dev</option>
+                      <option value="val3">travel</option>
+                      <option value="val3">bio</option>
+                      <option value="val3">react</option>
+                      <option value="val1" name="Gatsby">gatsby</option>
+                      <option value="val3">stack</option>
                   </select>
 
                 </div>
@@ -299,6 +290,17 @@ class BlogMain extends Component {
                 </div>
                : null}
             </div>
+        </div>: null}
+
+
+        {this.state.successresp ? <div className="quilltextview">
+          <ReactQuill
+            value={this.state.returnedDelta}
+            readOnly={true}
+            modules={{syntax: true}}
+            theme={"bubble"}
+          />
+        </div>: null}
 
       </div>
     );

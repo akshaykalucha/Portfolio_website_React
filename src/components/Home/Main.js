@@ -67,7 +67,7 @@ export default class Main extends Component {
                             <Route path="/blog" exact component={BlogComponent} />
                             <Route path="/software" exact component={SoftwareComponent} />
                             <Route path="/MyBlogPage" exact component={BlogPage} />
-                            <Route path="/MyBlogContent" exact component={BlogContent} />
+                            <Route path="/blog/:title" exact component={BlogContent} />
                         </Switch>
                     </Suspense>
                 <Footer />
