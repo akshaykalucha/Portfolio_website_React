@@ -54,8 +54,10 @@ function BlogContent() {
         var blogTitleUrl = document.location.pathname.substring(document.location.pathname.lastIndexOf('/') + 1)
         // console.log(blogTitleUrl)
         blogTitlt = blogTitleUrl
+        let titlearr = blogTitlt.split('-')
+        blogTitlt = titlearr.join(' ')
         // console.log(blogTitlt)
-        axios.get(`http://localhost:8000/api/v1/backend1/test1/${blogTitlt}/`)
+        axios.get(`https://akshayreactportfoliobackend.herokuapp.com/api/v1/backend1/test1/${blogTitlt}/`)
         .then(res => {
             let genricDate = res.data.Data.Created.substring(0, res.data.Data.Created.indexOf('T')).split('-').reverse().join('/')
             let dateArr = res.data.Data.Created.substring(0, res.data.Data.Created.indexOf('T')).split('-').reverse()
@@ -78,8 +80,8 @@ function BlogContent() {
             {
             BlogData ?
             <div className="textView">
-                <div className="tags__view">
-                    <div className="tags">
+                <div className="tags__views">
+                    <div className="tagss">
                         {BlogData.tags.map((tag) => 
                             <div key={Math.random()} style={
                                 tag==="gatsby" ? {backgroundColor: '#663399'}
@@ -90,11 +92,11 @@ function BlogContent() {
                                 : tag==="tech" ? {backgroundColor: '#666cdc'}
                                 : tag==="stack" ? {backgroundColor: "#8bc34a"}
                                 : null
-                        } className="tag"><a className="tagLink" href="/">{tag}</a></div>
+                        } className="tags"><a className="tagLink" href="/">{tag}</a></div>
                         )}
                     </div>
                 </div>
-                <div className="dates_view">
+                <div className="dates_views">
                     <p><i>{BlogData.Date}</i></p>
                 </div>
                 <ReactQuill

@@ -171,9 +171,9 @@ class BlogMain extends Component {
       const headers = {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
-        'Access-Control-Allow-Origin': 'http://localhost:300'
+        'Access-Control-Allow-Origin': 'https://akshaykalucha.com'
       }
-      axios.post(`http://localhost:8000/api/v1/backend1/test/`,
+      axios.post(`https://akshayreactportfoliobackend.herokuapp.com/api/v1/backend1/test/`,
        {title: this.state.title, deltaData: JSON.stringify(this.state.deltaData), tags: taglist},
        {headers: headers, withCredentials: true, xsrfCookieName: 'csrftoken_testtest', xsrfHeaderName: 'X-CSRFToken',}
        )
@@ -202,7 +202,7 @@ class BlogMain extends Component {
       ['bold', 'italic', 'underline', 'strike'],       // toggled buttons
       ['blockquote', 'code-block'],                    // blocks
       [{ 'header': 1 }, { 'header': 2 }],              // custom button values
-      ['image'],
+      ['link','image'],
       [{ 'list': 'ordered'}, { 'list': 'bullet' }],    // lists
       // [{ 'script': 'sub'}, { 'script': 'super' }],     // superscript/subscript
       [{ 'indent': '-1'}, { 'indent': '+1' }],         // outdent/indent

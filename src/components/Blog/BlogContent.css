@@ -4,11 +4,11 @@
     margin-top: 9rem;
 }
 
-.tags__view{
+.tags__views{
 
 }
 
-.tags{
+.tagss{
     display: flex;
     flex-wrap: flex;
     -webkit-box-align: center;
@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-.tag{
+.tags{
     margin: 0px 2rem 1rem 0px;
     opacity: 1;
     padding: 0.3rem 23px;
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-.tag:hover{
+.tags:hover{
     opacity: 0.8;
 }
 
@@ -43,7 +43,7 @@
     color: white;
 }
 
-.dates_view{
+.dates_views{
     color: #A7A7A7;
     font-size: 18px;
     /* font-weight: 600; */
@@ -63,11 +63,11 @@
         margin-top: 7rem;
     }
 
-    .dates_view{
+    .dates_views{
         margin-left: 23px;
     }
 
-    .tags{
+    .tagss{
         display: flex;
         flex-wrap: flex;
         -webkit-box-align: center;
@@ -92,7 +92,7 @@
     }
 
     
-    .tags{
+    .tagss{
         display: flex;
         flex-wrap: flex;
         -webkit-box-align: center;
@@ -106,7 +106,7 @@
         justify-content: center;
     }
     
-    .tag{
+    .tags{
         margin: 0px 2rem 1rem 0px;
         opacity: 1;
         padding: 0.3rem 23px;
@@ -118,7 +118,7 @@
         cursor: pointer;
     }
     
-    .tag:hover{
+    .tags:hover{
         opacity: 0.8;
     }
     
@@ -127,7 +127,7 @@
         color: white;
     }
     
-    .dates_view{
+    .dates_views{
         margin-left: 23px;
     }
 
@@ -144,7 +144,7 @@
     }
 
     
-    .tags{
+    .tagss{
         display: flex;
         flex-wrap: flex;
         -webkit-box-align: center;
@@ -158,7 +158,7 @@
         justify-content: center;
     }
     
-    .tag{
+    .tags{
         margin: 0px 1rem 1rem 0px;
         opacity: 1;
         padding: 0.3rem 23px;
@@ -170,7 +170,7 @@
         cursor: pointer;
     }
     
-    .tag:hover{
+    .tags:hover{
         opacity: 0.8;
     }
     
@@ -179,7 +179,7 @@
         color: white;
     }
     
-    .dates_view{
+    .dates_views{
         margin-left: 23px;
     }
 
@@ -196,7 +196,7 @@
     }
 
     
-    .tags{
+    .tagss{
         display: flex;
         flex-wrap: flex;
         -webkit-box-align: center;
@@ -210,7 +210,7 @@
         justify-content: center;
     }
     
-    .tag{
+    .tags{
         margin: 0px 1rem 1rem 0px;
         opacity: 1;
         padding: 0.3rem 23px;
@@ -222,7 +222,7 @@
         cursor: pointer;
     }
     
-    .tag:hover{
+    .tags:hover{
         opacity: 0.8;
     }
     
@@ -231,7 +231,7 @@
         color: white;
     }
     
-    .dates_view{
+    .dates_views{
         margin-left: 23px;
     }
 

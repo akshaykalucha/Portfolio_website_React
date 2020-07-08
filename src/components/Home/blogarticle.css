@@ -198,7 +198,7 @@
         display: flex;
         flex-wrap: flex;
         -webkit-box-align: center;
-        height: 80px;
+        height: 66px;
         align-items: center;
         overflow-y: hidden;
         margin-bottom: 0.5rem;
@@ -309,7 +309,7 @@
         display: flex;
         flex-wrap: flex;
         -webkit-box-align: center;
-        height: 80px;
+        height: 80px !important;
         align-items: center;
         overflow-y: hidden;
         margin-bottom: 0.5rem !important;
@@ -342,6 +342,17 @@
         padding-left: 11px;
         font-size: 8px !important;
         padding-top: 17px !important;
+    }
+    .tags{
+        display: flex;
+        flex-wrap: flex;
+        -webkit-box-align: center;
+        height: 99px;
+        align-items: center;
+        overflow-y: hidden;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        padding-left: 10px !important;
     }
     .dates__view {
         font-size: 0.79em;

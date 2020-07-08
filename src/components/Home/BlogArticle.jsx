@@ -99,6 +99,7 @@ function BlogArticle(props) {
                                         <img src={content.thumbnail} alt=""/>
                                     </div>
                                 </div>
+                                </a>
                                 <div className="mov__view">
                                     <div className="card__heading">
                                         <h1 style={ props.isDarknessStore ? {color: "white"} : null }>{props.isMobileStore ? content.MobileTitle : content.DesktopTitle}</h1>
@@ -125,8 +126,7 @@ function BlogArticle(props) {
                                     <div className="dates__view">
                                             <i style={ props.isDarknessStore ? {color: "white"} : null }>{content.date}</i>
                                     </div>
-                                </div>
-                                </a>
+                                </div>                                
                             </div>
                         )}
                         </div>
