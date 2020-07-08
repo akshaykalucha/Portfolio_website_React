@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReactQuill from 'react-quill'
+import './quill.bubble.css';
+import './BlogContent.css'
 import axios from 'axios';
 import Loading from '../Home/Loading'
 
