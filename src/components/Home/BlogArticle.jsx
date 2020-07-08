@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './blogarticle.css'
 import { connect } from 'react-redux'
 import { cardData } from './BlogArticleContent'
+import { NavLink } from 'react-router-dom'
 
 // function WordCount(str) { 
 //     return str.split(" ").length;
@@ -93,13 +94,14 @@ function BlogArticle(props) {
                         <div className="cards">
                         {cardContent.map((content) => 
                             <div style={ props.isDarknessStore ? {backgroundColor: "#2b2a2a"} : null } key={Math.random()} className="card-content">
-                                <a style={{textDecoration: "none",}} href={`blog/${content.link}`}>
+                                <NavLink style={{textDecoration: "none",}} to={`blog/${content.link}`}>
+                                {/* <a style={{textDecoration: "none",}} href={`blog/${content.link}`}> */}
                                 <div className="img-card">
                                     <div className="thumbnail">
                                         <img src={content.thumbnail} alt=""/>
                                     </div>
                                 </div>
-                                </a>
+                                </NavLink>
                                 <div className="mov__view">
                                     <div className="card__heading">
                                         <h1 style={ props.isDarknessStore ? {color: "white"} : null }>{props.isMobileStore ? content.MobileTitle : content.DesktopTitle}</h1>

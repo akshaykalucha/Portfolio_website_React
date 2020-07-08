@@ -297,7 +297,7 @@ class BlogMain extends Component {
           <ReactQuill
             value={this.state.returnedDelta}
             readOnly={true}
-            modules={{syntax: true}}
+            // modules={{syntax: true}}
             theme={"bubble"}
           />
         </div>: null}

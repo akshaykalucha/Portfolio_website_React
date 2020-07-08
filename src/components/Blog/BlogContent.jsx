@@ -6,31 +6,9 @@ import axios from 'axios';
 import Loading from '../Home/Loading'
 
 
+function BlogContent() {
 
-/*
-var loading = async() => {
-    const script = document.createElement("script");
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js";
-    // script.async = true;
-    // script.onload = () => alert("highlightjs1 loaded");
 
-    document.head.appendChild(script);
-
-    const link = document.createElement("link");
-    link.rel = "stylesheet"
-    link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css";
-    // link.async = true;
-    link.onload = () => console.log("highlightjs2 link load");
-    document.head.appendChild(link)
-    // setScripts(true)
-    setTimeout(
-        function(){
-            setScripts(true)
-        }, 5000
-    )
-}
-loading()
-*/
 
 
 function ConvLstToDate(arr){
@@ -44,7 +22,6 @@ function ConvLstToDate(arr){
     else if(arr[1]===11){ return dateStr=`November ${arr[0]}, ${arr[2]}`}else if(arr[1]===12){ return dateStr=`December ${arr[0]}, ${arr[2]}`}
 }
 
-function BlogContent() {
 
     const [BlogData, SetBlogData] = useState(null)
 
@@ -101,7 +78,7 @@ function BlogContent() {
                 </div>
                 <ReactQuill
                 value={BlogData.deltaData}
-                modules={{syntax:true}}
+                // modules={{syntax:true}}
                 readOnly={true}
                 theme={"bubble"}
                 />
