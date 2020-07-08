@@ -4,7 +4,7 @@ import Nav from '../Base/Nav';
 import Footer from '../Base/Footer'
 import ScrollTop from '../Base/ScrollTop'
 import Loading from './Loading'
-// import BlogContent from '../Blog/BlogContent'
+import BlogContent from '../Blog/BlogContent'
 
 
 const IndexComponent = (
@@ -40,11 +40,11 @@ const BlogPage = (
     ))
 )
 
-const BlogContent = (
-    lazy(() => (
-        import('../Blog/BlogContent')
-    ))
-)
+// const BlogContent = (
+//     lazy(() => (
+//         import('../Blog/BlogContent')
+//     ))
+// )
 
 const LoadingMessage = () => (
     <Loading />
@@ -59,6 +59,7 @@ export default class Main extends Component {
             <div style={{height: '100%'}}>
             <Nav />
                         <Switch>
+                        <Route path="/blog/:title/" component={BlogContent} />
                         <Suspense fallback={<LoadingMessage />}>
                             <Route path="/" exact component={IndexComponent} />
                             <Route path="/about">
@@ -68,7 +69,6 @@ export default class Main extends Component {
                             <Route path="/blog" exact component={BlogComponent} />
                             <Route path="/software" exact component={SoftwareComponent} />
                             <Route path="/MyBlogPage" exact component={BlogPage} />
-                            <Route path="/blog/:title/" component={BlogContent} />
                             </Suspense>
                         </Switch>
                 <Footer />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './quill.snow.css'
+import './snow.css'
 // import './quill.bubble.css'
 import ReactQuill, { Quill } from 'react-quill'
 import './blogmain.css'
