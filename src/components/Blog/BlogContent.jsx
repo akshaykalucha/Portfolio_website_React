@@ -69,7 +69,7 @@ function ConvLstToDate(arr){
                                 : tag==="tech" ? {backgroundColor: '#666cdc'}
                                 : tag==="stack" ? {backgroundColor: "#8bc34a"}
                                 : null
-                        } className="tags"><a className="tagLink" href="/">{tag}</a></div>
+                        } className="tagsBlog"><a className="tagLink" href="/">{tag}</a></div>
                         )}
                     </div>
                 </div>
