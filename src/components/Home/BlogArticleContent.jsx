@@ -2,11 +2,12 @@ import TravelPic from '../assets/chicagoreszd.jpg'
 // import DarkMode from '../assets/Darkreszd.jpg'
 // import SEO from '../assets/seo.png'
 import Residpic from '../assets/redispubsub.jpeg'
+import Protopic from '../assets/protocolbuffers.png'
 
 
 export const cardData = [
     {
-        thumbnail: 'https://blog.chirathr.com/public/images/protocol-buffers/protocolbuffers.png',
+        thumbnail: Protopic,
         title: "Why you should move to the new Protocol Buffers instead of old JSON",
         link: "Why-you-should-move-to-the-new-Protocol-Buffers-instead-of-old-JSON",
         content: "APIs are backbone of modern applications. APIs are powering the backend for web client and mobile client applications, and also used for communicate between applications regardless of technology and platform.",
