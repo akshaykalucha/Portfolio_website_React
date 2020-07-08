@@ -78,7 +78,7 @@ function ConvLstToDate(arr){
                 </div>
                 <ReactQuill
                 value={BlogData.deltaData}
-                // modules={{syntax:true}}
+                modules={{syntax:true}}
                 readOnly={true}
                 theme={"bubble"}
                 />
