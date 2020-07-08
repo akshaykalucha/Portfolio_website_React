@@ -59,7 +59,7 @@ export default class Main extends Component {
             <div style={{height: '100%'}}>
             <Nav />
                         <Switch>
-                        <Route path="/blog/:title/" component={BlogContent} />
+                        <Route path="/blog/:title/" exact component={BlogContent} />
                         <Suspense fallback={<LoadingMessage />}>
                             <Route path="/" exact component={IndexComponent} />
                             <Route path="/about">
