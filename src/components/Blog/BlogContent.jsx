@@ -36,6 +36,7 @@ function ConvLstToDate(arr){
     useEffect(()=>{
         /*eslint-disable*/
         var blogTitleUrl = document.location.pathname.substring(document.location.pathname.lastIndexOf('/') + 1)
+        // console.log(blogTitleUrl)
         blogTitlt = blogTitleUrl
         let titlearr = blogTitlt.split('-')
         blogTitlt = titlearr.join(' ')
