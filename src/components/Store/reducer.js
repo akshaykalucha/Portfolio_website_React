@@ -3,7 +3,8 @@ import * as actionTypes from './actions';
 const initialState = {
     sideDrawerOpen: false,
     isMobile: false,
-    isDark: false
+    isDark: false,
+    title: ''
 }
 
 const reducer = (state=initialState, action ) => {
@@ -24,6 +25,12 @@ const reducer = (state=initialState, action ) => {
             return{
                 ...state,
                 isDark: action.param
+            }
+        
+        case actionTypes.SET_TITLE:
+            return{
+                ...state,
+                title: action.param
             }
 
         default:

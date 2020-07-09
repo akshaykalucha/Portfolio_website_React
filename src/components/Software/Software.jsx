@@ -2,12 +2,17 @@ import React from 'react'
 import { TableBody, Tableheading } from './content'
 import './software.css'
 import SectionBottom from './SectionBottom'
+import {Helmet} from "react-helmet";
 import { connect } from 'react-redux'
 
 function Software(props) {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Akshay Kalucha-Software</title>
+            </Helmet>
             <div style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="software__table-div">
                 <div className="software__heading">
                 <p style={ props.isDarknessStore ? {color: "white"} : null }>Software Repository</p>

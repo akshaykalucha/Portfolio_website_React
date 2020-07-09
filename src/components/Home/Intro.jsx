@@ -4,12 +4,23 @@ import skill1 from './icon1.svg'
 import skill2 from './icon4.svg'
 import skill3 from './icon5.svg'
 import { connect } from 'react-redux'
+import {Helmet} from "react-helmet";
 import { NavLink } from 'react-router-dom'
 
 function Intro(props)  {
 
         return (
             <div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Akshay Kalucha</title>
+                    <meta name="twitter:card" content="summary" />
+                    <meta name="twitter:creator" content="@lifeofakshy" />
+                    <meta name="twitter:site" content="@lifeofakshy" />
+                    <meta name="twitter:title" content="I'm Akshay Kalucha" />
+                    <meta name="twitter:description" content="software & programming hobbyist..." />
+                    <meta name="twitter:image" content="https://raw.githubusercontent.com/akshaykalucha3/Portfolio_website_React/master/public/mylogo.jpg" />
+                </Helmet>
                 <section className="main__intro__name" style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null }>
                     <h1 style={ props.isDarknessStore ? {color: "white", zIndex: 0} : null } className="branding__name">I'm Akshay Kalucha</h1>
                     <p>Self-learning software and programming hobbyist through research & development.

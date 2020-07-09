@@ -4,9 +4,13 @@ import './quill.bubble.css';
 import './BlogContent.css'
 import axios from 'axios';
 import Loading from '../Home/Loading'
+import {Helmet} from "react-helmet";
+import { connect } from 'react-redux'
+import * as actionTypes from '../Store/actions';
 
 
-function BlogContent() {
+
+function BlogContent(props) {
 
 
 
@@ -24,6 +28,9 @@ function ConvLstToDate(arr){
 
 
     const [BlogData, SetBlogData] = useState(null)
+    const [helmet, setHelmet] = useState(null)
+    const [metaImage, setMetaImage] = useState('')
+    const [title, setTitle] = useState(null)
 
     let blogTitlt = ''
     useEffect(()=>{
@@ -49,11 +56,31 @@ function ConvLstToDate(arr){
         })
         .catch(err=>console.log(err))
         }, [])
-    
+
+        if(BlogData != null){
+            window.addEventListener('load', function(){
+                let imgtag = document.getElementsByClassName("ql-editor")
+                let imgLink = imgtag[0].querySelectorAll('p img')[0].currentSrc
+                console.log(imgLink)
+                setMetaImage(imgLink)
+                setHelmet(true)
+                setTitle(true)
+                props.setPageTitle("Akshay Kalucha-Blog")
+                console.log("title set action dispatcg=hed")
+            })  
+        }
+  
     return (
         <div>
-
-
+            {helmet ?
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{props.pageTitle}</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <meta name="twitter:img" content={metaImage} />
+            </Helmet>
+            : null
+            }
             {
             BlogData ?
             <div className="textView">
@@ -94,4 +121,17 @@ function ConvLstToDate(arr){
     )
 }
 
-export default BlogContent
+
+const mapStateToProps = state => {
+    return {
+        pageTitle: state.title
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        setPageTitle: (value) => dispatch({type: actionTypes.SET_TITLE, param: value}),
+    }}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlogContent)

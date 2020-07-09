@@ -3,6 +3,8 @@ import './contactform.css'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import 'regex'
 import { connect } from 'react-redux'
+import {Helmet} from "react-helmet";
+
 
 
 const validEmailRegex = RegExp(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/);
@@ -385,6 +387,10 @@ class ContactForm extends Component {
         else{
             return (
                 <div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Akshay Kalucha-Contact</title>
+                </Helmet>
                     <div style={ this.props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="contactForm__main">
                         <div className="contactForm">
                             <h4 style={ this.props.isDarknessStore ? {color: "white"} : null } className="form-heading">

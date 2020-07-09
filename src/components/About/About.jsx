@@ -6,11 +6,18 @@ import github from './github.svg'
 import linkedin from './linkedin.svg'
 import instagram from './instagram.svg'
 import twitter from './twitter.svg'
+import {Helmet} from "react-helmet";
+
 
 function About(props) {
 
         return (
             <div>
+
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Akshay Kalucha-About</title>
+                </Helmet>
                     <section style={ props.isDarknessStore ? {backgroundColor: "#212121"} : null } className="about__section">
                         <div className="about__container">
                             <h1 style={ props.isDarknessStore ? {color: "white"} : null }>About Me</h1>
