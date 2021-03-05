@@ -395,7 +395,7 @@ class ContactForm extends Component {
                         <div className="contactForm">
                             <h4 style={ this.props.isDarknessStore ? {color: "white"} : null } className="form-heading">
                                 Feel free to email me via
-                                <a className="my__email" href="akshay23l@hotmail.com" target="_top">akshay23l@hotmail.com"</a>
+                                <a className="my__email" href="akshay23l@hotmail.com" target="_top">"akshay23l@hotmail.com"</a>
                             </h4>
                             <p style={ this.props.isDarknessStore ? {color: "white"} : null } className="form__para">Or fill in the contact form down below</p>
                             <form onSubmit={ e => this.formSubmit(e)} method="POST"  className="form-main">
