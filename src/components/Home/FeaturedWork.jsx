@@ -35,7 +35,7 @@ function FeaturedWork(props) {
     // }
 
     function scalezoom(e){
-        console.log("touched")
+        console.log("")
     }
 
 

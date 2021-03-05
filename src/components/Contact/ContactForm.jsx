@@ -88,7 +88,7 @@ class ContactForm extends Component {
             this.setState({
                 email: email
             })
-            console.log(email)
+            // console.log(email)
             if(email.length>=2){
                 if(this.state.firstFocus){
                     if(validEmailRegex.test(email)===false){
@@ -159,7 +159,7 @@ class ContactForm extends Component {
 
                 })
         }else if(this.state.name.length >= 1 && this.state.email.length >= 1 && this.state.message.length <= 1){
-            console.log("yes 2")
+            // console.log("yes 2")
             this.setState({
                 errorMessage:{
                     ...this.state.errorMessage,
@@ -183,7 +183,7 @@ class ContactForm extends Component {
             })
             return
         }else if(this.state.name.length === 0 && this.state.email.length === 0 && this.state.message.length >= 1){
-            console.log("yes")
+            // console.log("yes")
             this.setState({
                 errorMessage:{
                     ...this.state.errorMessage,
@@ -203,7 +203,7 @@ class ContactForm extends Component {
             return
         }
         else if(this.state.name.length <= 1 || this.state.email.length <= 1 || this.state.message.length <= 1){
-            console.log('please fill the fields')
+            // console.log('please fill the fields')
             this.setState({
                 ...this.state,
                 firstFocus: true,
@@ -231,7 +231,7 @@ class ContactForm extends Component {
                 ...this.state,
                 submitClicked: true
             })
-            console.log('form submit in action')
+            // console.log('form submit in action')
             setTimeout(() => {
                 this.setState({
                     success: true,
@@ -242,7 +242,7 @@ class ContactForm extends Component {
     }
 
     goBack(e){
-        console.log('going back')
+        // console.log('going back')
         this.setState({
             name: "",
             email: "",
@@ -272,7 +272,7 @@ class ContactForm extends Component {
     }
 
     onBlurName(e) {
-        console.log(e.target.value.length)
+        // console.log(e.target.value.length)
         if(e.target.value<=1){
             this.setState({
                 firstFocus: true,

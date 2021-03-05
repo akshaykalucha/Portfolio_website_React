@@ -61,12 +61,12 @@ function ConvLstToDate(arr){
             window.addEventListener('load', function(){
                 let imgtag = document.getElementsByClassName("ql-editor")
                 let imgLink = imgtag[0].querySelectorAll('p img')[0].currentSrc
-                console.log(imgLink)
+                // console.log(imgLink)
                 setMetaImage(imgLink)
                 setHelmet(true)
                 setTitle(true)
                 props.setPageTitle("Akshay Kalucha-Blog")
-                console.log("title set action dispatcg=hed")
+                // console.log("title set action dispatcg=hed")
             })  
         }
   

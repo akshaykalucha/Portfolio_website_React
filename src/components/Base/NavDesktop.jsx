@@ -16,7 +16,7 @@ class NavDesktop extends Component {
 
     handleDarkMode(e){
         e.preventDefault();
-        console.log("making dark")
+        // console.log("making dark")
         this.props.setIsDark(!this.props.isDarknessStore)
     }
 

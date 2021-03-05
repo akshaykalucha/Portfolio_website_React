@@ -17,7 +17,7 @@ import { NavLink } from 'react-router-dom'
     }
 
     const handleDarkMode = () => {
-        console.log("making dark")
+        // console.log("making dark")
         props.setIsDark(!props.isDarknessStore)
     }
 
