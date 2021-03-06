@@ -539,4 +539,16 @@ and (-webkit-device-pixel-ratio: 2) {
     .skwed__imd__labels{
         padding-left: 15%;
     }
+    .skwedpath {
+        -webkit-clip-path: polygon(0% 14%, 100% 0px, 100% 84%, 0px 100%);
+        clip-path: polygon(0% 14%, 100% 0px, 100% 88%, 0px 100%);
+    }
+    /* .skewed__path-outro {
+        height: 200vh !important;
+        background-color: #f9f9f9;
+        width: 100%;
+        -webkit-clip-path: polygon(0% 9%, 100% 0px, 100% 89%, 0px 100%);
+        clip-path: polygon(0% 9%, 100% 0px, 100% 89%, 0px 100%);
+    } */
+    
 }

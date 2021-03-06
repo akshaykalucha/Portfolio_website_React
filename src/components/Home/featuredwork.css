@@ -176,3 +176,13 @@
 
 
 }
+
+@media(min-width: 1370px) and (min-height: 990px){
+
+    .card_container {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 15rem;
+        margin-bottom: -14rem;
+    }
+}

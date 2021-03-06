@@ -399,3 +399,14 @@ and (-webkit-device-pixel-ratio: 2) {
     }
 
 }
+
+
+@media(min-width: 1370px) and (min-height: 990px){
+
+    .blogArticle__main {
+        margin: 0 auto;
+        width: 80%;
+        padding-top: 15rem;
+        margin-top: -12rem;
+    }
+}

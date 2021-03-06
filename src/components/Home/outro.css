@@ -111,3 +111,20 @@ and (-webkit-device-pixel-ratio: 2) {
     }
 
 }
+
+@media(min-width: 1370px) and (min-height: 990px){
+    .skewed__path-main {
+        text-align: left;
+        margin: auto 3rem;
+        margin-left: 6rem;
+        margin-top: 5rem;
+    }
+
+    .main__heading-outro {
+        margin-top: 5rem;
+        margin-left: 43%;
+        font-size: 23px;
+        padding-top: 10rem;
+    }
+
+}
