@@ -33,6 +33,31 @@
     transform: scale(1.1);
 }
 
+@media(min-height: 896px){
+    .main__heading-outro {
+        padding-top: 7.7rem !important;
+    }
+    .item__outro{
+        padding-top: 1rem;
+    }
+    .skewed__path-main{
+        margin-top: 0rem;
+    }
+    .skewed__path-outro{
+        height: 139vh !important;
+    }
+}
+
+@media(max-height: 670px){
+    .main__items-outro p{
+        margin-bottom: 32px !important;
+        margin-top: 2px;
+    }
+    .item__outro h3{
+        margin-bottom: 2px;
+    }
+}
+
 @media(max-width: 768px){
 
 
