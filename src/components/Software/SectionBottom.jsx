@@ -65,7 +65,7 @@ function SectionBottom(props) {
                         </tr>
                         <tr style={ props.isDarknessStore ? {color: "white"} : null }>
                             <td>mysql</td>
-                            <td>private. only accessible within cluster</td>
+                            <td>private only accessible within cluster</td>
                             <td>Database for jwtidentity, hangfire, hangfire_github, hangfire_youtube</td>
                         </tr>
                         <tr style={ props.isDarknessStore ? {color: "white"} : null }>
