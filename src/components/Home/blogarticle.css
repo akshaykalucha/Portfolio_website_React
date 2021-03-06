@@ -1,8 +1,8 @@
 .blogArticle__main{
     margin: 0 auto;
     width: 80%;
-    padding-top: 3rem;
-    margin-top: -4rem;
+    padding-top: 15rem;
+    margin-top: -15rem;
 }
 
 .headings{
@@ -115,15 +115,15 @@
     .blogArticle__main{
         width: 100%;
         margin: 0 auto;
-        margin-top: -5rem;
-        padding-top: 0;
+        padding-top: 15rem;
+        margin-top: -15rem;
     }
     
     .headings{
         color: rgba(0,0,0,0.8);
         margin-bottom: 2rem;
         margin-left: 1.4rem;
-        padding-top: 5rem;
+        padding-top: 1rem;
     }
     
     .cards{
@@ -399,3 +399,14 @@ and (-webkit-device-pixel-ratio: 2) {
     }
 
 }
+
+
+/* @media(min-width: 1350px) and (min-height: 750px){
+
+    .blogArticle__main {
+        margin: 0 auto;
+        width: 80%;
+        padding-top: 15rem;
+        margin-top: -15rem;
+    }
+} */
