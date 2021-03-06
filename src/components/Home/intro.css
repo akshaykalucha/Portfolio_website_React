@@ -495,3 +495,48 @@ and (-webkit-device-pixel-ratio: 2) {
     } */
 
 }
+
+@media(min-width: 1370px) and (min-height: 990px){
+    .main__intro__name p {
+        color: #808080;
+        font-size: 19px;
+        padding-left: 17%;
+        padding-top: 30px;
+        padding-right: 20.3%;
+    }
+    .main__intro__name{
+        height: 74vh;
+        padding-top: 7rem;
+        margin-bottom: -13rem;
+    }
+    
+    .branding__name {
+        font-size: 3.6rem;
+        margin-left: 17%;
+        top: 64px;
+    }
+    .neon__buttons__color {
+        margin-left: 17%;
+        padding-top: 19px;
+    }
+    .main__section__skwed h1{
+        color: black;
+        padding-top: 232px;
+        margin-left: 3rem;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+    
+    .skills__div{
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0rem 0rem;
+        padding-top: 82px;
+        margin-left: 13.2rem;
+    }
+
+    .skwed__imd__labels{
+        padding-left: 15%;
+    }
+}
