@@ -533,11 +533,11 @@ and (-webkit-device-pixel-ratio: 2) {
         flex-wrap: nowrap;
         margin: 0rem 0rem;
         padding-top: 82px;
-        margin-left: 13.2rem;
+        margin-left: 12.2rem;
     }
 
     .skwed__imd__labels{
-        padding-left: 15%;
+        padding-left: 14%;
     }
     .skwedpath {
         -webkit-clip-path: polygon(0% 14%, 100% 0px, 100% 84%, 0px 100%);
