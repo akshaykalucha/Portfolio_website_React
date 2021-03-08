@@ -31,6 +31,8 @@ class Testimonials extends Component {
                 scrollLockDelay: 30
             });
         }
+
+        
         else if(this.props.isMobileStore===false){
             //Desktop
             new Glider(document.querySelector('.glider'), {
