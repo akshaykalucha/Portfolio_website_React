@@ -72,3 +72,23 @@ position: relative;
 top: 0px;
 left: 7px;
 }
+
+@media (min-width: 1800px) and (min-height: 970px){
+    .toolbar {
+        height: 79px;
+    }
+    .toolbar__logo a {
+        top: 4px;
+        font-size: 35px;
+        letter-spacing: 1px;
+        opacity: 0.8;
+    }
+    .Nav__Logo-A {
+        height: 181%;
+        margin-top: 25px;
+        left: 100px;
+    }
+    .toolbar_navigation-items a {
+        font-size: 22px;
+    }
+}
